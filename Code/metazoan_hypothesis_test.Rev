@@ -1,0 +1,100 @@
+###########################################################################
+#
+# RevBayes Script: Testing specific hypothesis for metazoans
+#
+# To run this analysis, call `rb metazoan_hypothesis_test.Rev --args xxx_run_1.trees xxx_run_1.txt`
+#
+# author: Sebastian Hoehna
+#
+###########################################################################
+
+
+## we extract the arguments and store them
+INPUT_FILENAME = args[1]
+OUTPUT_FILENAME = args[2]
+
+
+## read in the tree trace
+#trace = readTreeTrace(INPUT_FILENAME, treetype="non-clock", outgroup=clade("SCPO","SACE","MAOR","CRNE","ALMA","SPPU"))
+trace = readTreeTrace(INPUT_FILENAME, treetype="non-clock")
+
+
+
+## Define the clades of interest
+Porifera = clade("OSCA", "AMQU", "SYCI", "TEWI")
+Ctenophora = clade("PLBA", "MNLE")
+Placozoa = clade("HOHO", "TRAD")
+Cnidaria = clade("ACDI", "HYMA", "NEVE")
+Xenacoelomorpha = clade("NEWE", "SYRO", "MEST", "XEBO", "PSVA")
+Hemichordata = clade("SAKO", "PTFL")
+Echinodermata = clade("ACPL", "AUMO", "OPFA", "STPU")
+Chordata = clade("BRFL", "GAGA", "XETR", "CIIN", "HOSA", "DARE")
+Lophotrochozoa = clade("SCMA", "HERO", "LOGI", "CATE")
+Ecdysozoa = clade("PRPA", "DRME", "IXSC", "CAEL", "DAPU")
+
+
+## compute the posterior probability for each of these clades
+pp_Porifera = trace.cladeProbability(Porifera)
+pp_Ctenophora = trace.cladeProbability(Ctenophora)
+pp_Cnidaria = trace.cladeProbability(Cnidaria)
+pp_Xenacoelomorpha = trace.cladeProbability(Xenacoelomorpha)
+pp_Hemichordata = trace.cladeProbability(Hemichordata)
+pp_Echinodermata = trace.cladeProbability(Echinodermata)
+pp_Chordata = trace.cladeProbability(Chordata)
+pp_Lophotrochozoa = trace.cladeProbability(Lophotrochozoa)
+pp_Ecdysozoa = trace.cladeProbability(Ecdysozoa)
+
+
+## Test the monophyly of metazoans without Ctenophora and Porifera
+metazoans_ingroup = clade(Ecdysozoa, Lophotrochozoa, Chordata, Echinodermata, Hemichordata, Xenacoelomorpha, Cnidaria, Placozoa)
+pp_metazoans_ingroup = trace.cladeProbability(metazoans_ingroup)
+
+
+## Test the monophyly of metazoans with Ctenophora and Porifera
+metazoans = clade(Ecdysozoa, Lophotrochozoa, Chordata, Echinodermata, Hemichordata, Xenacoelomorpha, Cnidaria, Placozoa, Porifera, Ctenophora)
+pp_metazoans = trace.cladeProbability(metazoans)
+
+
+## Test the Ctenophora-Sister hypothesis
+Ctenophora_Sister = clade(Ecdysozoa, Lophotrochozoa, Chordata, Echinodermata, Hemichordata, Xenacoelomorpha, Cnidaria, Placozoa, Porifera)
+pp_Ctenophora_Sister = trace.cladeProbability(Ctenophora_Sister)
+
+
+## Test the Porifera-Sister hypothesis
+Porifera_Sister = clade(Ecdysozoa, Lophotrochozoa, Chordata, Echinodermata, Hemichordata, Xenacoelomorpha, Cnidaria, Placozoa, Ctenophora)
+pp_Porifera_Sister = trace.cladeProbability(Porifera_Sister)
+
+
+## Test the Deuterostome hypothesis (or paraphyly, depending on null hypothesis, see below)
+Deuterostome = clade(Hemichordata, Echinodermata, Chordata)
+pp_Deuterostome = trace.cladeProbability(Deuterostome)
+
+## Test the Xenambulacraria hypothesis
+Nephrozoa = clade(Ecdysozoa, Lophotrochozoa, Chordata, Echinodermata, Hemichordata)
+Xenambulacraria = clade(Xenacoelomorpha, Hemichordata, Echinodermata)
+pp_Nephrozoa = trace.cladeProbability(Nephrozoa)
+pp_Xenambulacraria = trace.cladeProbability(Xenambulacraria)
+
+
+
+## Now write the results into a file
+write(file=OUTPUT_FILENAME,trace.size(),"\n",append=FALSE)
+write(file=OUTPUT_FILENAME,pp_Porifera,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Ctenophora,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Cnidaria,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Xenacoelomorpha,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Hemichordata,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Echinodermata,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Lophotrochozoa,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Ecdysozoa,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_metazoans,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_metazoans_ingroup,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Ctenophora_Sister,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Porifera_Sister,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Deuterostome,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Nephrozoa,"\n",append=TRUE)
+write(file=OUTPUT_FILENAME,pp_Xenambulacraria,"\n",append=TRUE)
+
+
+## quit
+q()
