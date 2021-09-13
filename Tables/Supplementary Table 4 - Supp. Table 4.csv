@@ -1,0 +1,15 @@
+"Supplementary Table 4 | Naming convention for LBA check, for additional information for the datasets see Supplementary Table 2.",,,,,
+Long-Branch attraction tests,,,Ctenophora-sister vs Porifera-sister (Total n. of sp.),Relationships of Xenacoelomorpha - taxon exclusion ,
+Outgroup Sapling,LBA effect from,Method,,Xenoturbella  (Total n. of sp.),Acoeloorpha (Total n. of sp.)
+Opisthokonta,distant outgroup,Ab initio,Opi-homo/ortho-disAb47,OpiXen-homo/ortho-disAb41,OpiAco-homo/ortho-disAb44
+,,Pruning,-,OpiXen-homo/ortho-disP41,OpiAco-homo/ortho-disP44
+,in-groups (near group),Ab initio,Opi-homo/ortho-neAb44,OpiXen-homo/ortho-neAb38,OpiAco-homo/ortho-neAb41
+,,Pruning,Opi-homo/ortho-neP44,OpiXen-homo/ortho-neP38,OpiAco-homo/ortho-neP41
+Holozoa,distant outgroup,Ab initio,Hol-homo/ortho-disAb41,HolXen-homo/ortho-disAb35,HolAco-homo/ortho-desAb38
+,,Pruning,Hol-homo/ortho-disP41,HolXen-homo/ortho-disP35,HolAco-homo/ortho-disP38
+,in-groups (near group),Ab initio,Hol-homo/ortho-neAb38,HolXen-homo/ortho-neAb32,HolAco-homo/ortho-neAb35
+,,Pruning,Hol-homo/ortho-neP38,HolXen-homo/ortho-neP32,HolAco-homo/ortho-neP35
+Choanozoa,distant outgroup,Ab initio,Cho-homo/ortho-disAb39,ChoXen-homo/ortho-disAb33,ChoAco-homo/ortho-disAb36
+,,Pruning,Cho-homo/ortho-disP39,ChoXen-homo/ortho-disP33,ChoAco-homo/ortho-disP36
+,in-groups (near group),Ab initio,Cho-homo/ortho-neAb36,ChoXen-homo/ortho-neAb30,ChoAco-homo/ortho-neAb33
+,,Pruning,Cho-homo/ortho-neP36,ChoXen-homo/ortho-neP30,ChoAco-homo/ortho-neP33
