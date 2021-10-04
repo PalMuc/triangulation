@@ -147,7 +147,7 @@ For datasets creation using the pruning method, use the initial 47 species datas
 
 ### The data structure for the genome gene content ###
 
-See file: [ _"Genome gene content datasets protocol"_ ](https://github.com/PalMuc/triangulation/blob/main/Genome%20gene%20content%20datasets%20protocol.pdf)
+See file: [ _"Genome gene content datasets protocol"_ ] (https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Genome%20gene%20content%20datasets%20protocol.pdf)
 
 ### The output of this analysis ###
 
