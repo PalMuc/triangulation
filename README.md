@@ -1,4 +1,4 @@
-This is a data repository of the working paper
+*This is a data repository of the working paper*
 
 # Towards resolving controversial nodes in the animal tree of life #
 
@@ -17,6 +17,7 @@ Juravel, Ksenia 1; Porras, Luis 1; Höhna, Sebastian 1,2; Pisani, Davide 3; Wör
 ## Abstract ##
 An accurate phylogeny of animals is needed to clarify their evolution, ecology, and impact on shaping the biosphere. Although multi-gene alignments of up to several hundred thousand amino acids are nowadays routinely used to test hypotheses of animal relationships, some nodes in the animal tree proved hard to resolve. Those problematic nodes are primarily found towards the root of the animal tree. While the relationships of the non-bilaterian lineages, primarily sponges (Porifera) and comb jellies (Ctenophora), have received much attention since more than a decade, controversies about the phylogenetic position of the worm-like bilaterian lineage Xenacoelomorpha and the monophyly of the “Superphylum” Deuterostomia have more recently emerged. Here we independently analyse novel genome gene content and morphological datasets to assess patterns of phylogenetic congruence with previous amino-acid derived phylogenetic hypotheses. Using Bayes factors, we show that both our data strongly support Xenoacoelomorpha as the sister group of the other Bilateria – the Nephrozoa hypothesis – and monophyletic Deuterostomia. As in previous analyses, we recover Porifera as the sister group of all other animals. Consistent with the Nephrozoa hypothesis, the last common bilaterian ancestor may have been a simple acoelomate worm without an anus.
 
+## Description ##
 This repository includes all the codes used to analyze the data for the various phylogenies.
 
 For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Morphology/Morphology_files.zip).
