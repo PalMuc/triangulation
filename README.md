@@ -1,22 +1,34 @@
+This is a data repository of the working paper
 
-# Triangulation resolves controversial nodes in the animal tree of life #
+# Towards resolving controversial nodes in the animal tree of life #
 
-We analyzed 47 genome-based proteomes with known tools and custom codes to test hypotheses of animal relationships, specifically focussing on the relationships of the two non-bilaterian lineages sponges (Porifera) and comb jellies (Ctenophora) (e.g., Simion et al. 2017), and a bilaterian lineage, the Xenacoelomorpha (e.g., Kapli and Telford 2020).
-Here we investigate the phylogenetic signal in two independent data types, genome gene content and morphology, and use data triangulation (Munafò and Davey Smith 2018) to test patterns of phylogenetic congruence with amino-acid derived phylogenetic hypotheses. 
-Using Bayes factors (Kass and Raftery 1995), we show that the different types of data strongly support sponges as the sister of all other animals – the Porifera-sister hypothesis – and Xenoacoelomorpha as sister to the other Bilateria – the Nephrozoa hypothesis. 
-We provide a consistent phylogenetic framework to reconstruct the earliest stages of animal evolution by resolving these controversial nodes. 
-This study illustrates the utility of multiple sources of phylogenetic information to address recalcitrant phylogenomic hypotheses.  
+Juravel, Ksenia 1; Porras, Luis 1; Höhna, Sebastian 1,2; Pisani, Davide 3; Wörheide, Gert 1,2,4, §
+
+1 Department of Earth and Environmental Sciences, Paleontology & Geobiology, Ludwig-Maximilians-Universität München, Richard-Wagner-Str. 10, 80333 München, Germany
+
+2 GeoBio-Center, Ludwig-Maximilians-Universität München, Richard-Wagner-Str. 10, 80333 München, Germany
+
+3 School of Biological Sciences and School of Earth Sciences, University of Bristol, UK.
+
+4 SNSB-Bayerische Staatssammlung für Paläontologie und Geologie, Richard-Wagner-Str. 10, 80333 München, Germany
+
+§ corresponding author email: woerheide@lmu.de
+
+## Abstract ##
+An accurate phylogeny of animals is needed to clarify their evolution, ecology, and impact on shaping the biosphere. Although multi-gene alignments of up to several hundred thousand amino acids are nowadays routinely used to test hypotheses of animal relationships, some nodes in the animal tree proved hard to resolve. Those problematic nodes are primarily found towards the root of the animal tree. While the relationships of the non-bilaterian lineages, primarily sponges (Porifera) and comb jellies (Ctenophora), have received much attention since more than a decade, controversies about the phylogenetic position of the worm-like bilaterian lineage Xenacoelomorpha and the monophyly of the “Superphylum” Deuterostomia have more recently emerged. Here we independently analyse novel genome gene content and morphological datasets to assess patterns of phylogenetic congruence with previous amino-acid derived phylogenetic hypotheses. Using Bayes factors, we show that both our data strongly support Xenoacoelomorpha as the sister group of the other Bilateria – the Nephrozoa hypothesis – and monophyletic Deuterostomia. As in previous analyses, we recover Porifera as the sister group of all other animals. Consistent with the Nephrozoa hypothesis, the last common bilaterian ancestor may have been a simple acoelomate worm without an anus.
 
 This repository includes all the codes used to analyze the data for the various phylogenies.
 
-The results obtained in the different steps can be found for the morphology analysis in [Morphology/Morphology_files.zip](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Morphology/Morphology_files.zip) and provided upon request for the genome gene content (file is too big for the repository, it has ~3 T size uncompressed). 
+For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Morphology/Morphology_files.zip).
+
+For the genome gene content analysis, the results obtained in the different steps can be provided upon request, because the file is too big for the repository, it has ~3 TB size uncompressed. 
 
 
 All the steps are listed and described below.
 
-### General workflow: ###
+### General workflow for genome gene content analysis: ###
 
-1. Extract proteins from genome based predictions for species of interest.
+1. Extract proteins from genome based predictions for species of interest. 47 species were used here.
 2. Check for similarity all vs. all.
 3. Cluster the proteins into groups (homologous and orthologous).
 4. Extract ortho- and homogroups.
@@ -52,7 +64,7 @@ short_names_convert.sh - Used to translate from 4 letters short names of species
 gene_content_original.Rev - code for revBayes adopted from [willpett](https://github.com/willpett/metazoa-gene-content). 
 
 
-### How to re-run the analyses in this study: ###
+### How to re-run the genome gene content analyses in this study: ###
 
 Create a folder with the complete set of proteomes for the species of interest. Moreover, follow the following steps:
 
@@ -132,10 +144,6 @@ Repeat the steps of Orthogroups and Homogroups with the new taxa combination pro
 For datasets creation using the pruning method, use the initial 47 species dataset NEXUS and the script [Nexus_Pruning.sh](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/Nexus_Pruning.sh).
 
 
-
-
-
-
 ### The data structure for the genome gene content ###
 
 See file: [ _"Genome gene content datasets protocol"_ ](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Genome%20gene%20content%20datasets%20protocol.pdf)
@@ -145,10 +153,6 @@ See file: [ _"Genome gene content datasets protocol"_ ](https://github.com/Kseni
 To recreate the initial species dataset download all the files in this repository folder [Species_Files](https://github.com/KseniaJuravel/triangulation-juravel-2021/tree/main/Species_Files) ending with *.fasta.xz.
 
 All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Morphology/Morphology_NEXUS.zip.xz) for the Morphology data and [Run_2.zip.xz](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/NEXUS/Run_2.zip.xz) for the genome gene content second iteration (and in  [Run_1.zip.xz](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/NEXUS/Run_1.zip.xz) for the first iteration).
-
-
-Complete data can be found for the morphology analyses in [Morphology_files.zip](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Morphology/Morphology_files.zip) and provided upon request for the genome gene content (file is too big for repository ~3 T folder uncompressed).
-
 
 
 ### Supplementary tables: ###
@@ -193,6 +197,7 @@ All morphology-related files can be found in [Morphology/](https://github.com/Ks
 Three hundred forty-seven directories of genome gene content data (~3 T, compressed 645 GB - too large to be stored here) can be provided upon request.
 
 
-### Who do I talk to? ###
+### Who do I talk to if I have questions or problems? ###
 
-* Repo owner or admin
+* for technical questions about genome gene content analyses: Ksenia Juravel (k.juravel@palmuc.org)
+* for technical questions about morphology analyses: Luis Porras (l.porras@palmuc.org)
