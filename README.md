@@ -20,7 +20,7 @@ An accurate phylogeny of animals is needed to clarify their evolution, ecology, 
 ## Description ##
 This repository includes all the codes used to analyze the data for the various phylogenies.
 
-For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Morphology/Morphology_files.zip).
+For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_files.zip).
 
 For the genome gene content analysis, the results obtained in the different steps can be provided upon request, because the file is too big for the repository, it has ~3 TB size uncompressed. 
 
@@ -37,7 +37,7 @@ All the steps are listed and described below.
 6. Generate phylogeny.
 7. (Statistical investigation)
 
-![Alt text](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Additional%20information/Figure2.jpg)
+![Alt text](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Figure1.png)
 
 ### Programs used: ###
 
@@ -77,7 +77,7 @@ Alternatively, run OrthoFinder once and just re-run DIAMOND on previously genera
 
 Use the pre-calculated results for MCL step using different I values.
 
-To automate this step use the code similarly to the one in (adoption to your computer and settings of the system required) [code for multiple OrthoFinder](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/OrthoFinder_for_MCL_after_DIAMOND.sh).
+To automate this step use the code similarly to the one in (adoption to your computer and settings of the system required) [code for multiple OrthoFinder](https://github.com/PalMuc/triangulation/blob/main/Code/OrthoFinder_for_MCL_after_DIAMOND.sh).
 
 After generating the orthogroups file (Orthogroups.tsv, from OrthoFinder output) format it to fit the revBayes formatting in NEXUS using:
 
@@ -90,18 +90,18 @@ After generating the orthogroups file (Orthogroups.tsv, from OrthoFinder output)
 
 5. Ensure to extract positions shared by less than two species (singletons extract).
 
-6. Use the final output as input to the [revBayse analyses](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/mcmc_gene_content_original.Rev).
+6. Use the final output as input to the [revBayse analyses](https://github.com/PalMuc/triangulation/blob/main/Code/mcmc_gene_content_original.Rev).
 
 Optional - 7. Extract convergence statistics for the phylogenies.
 
-Optional - 8. Calculate Bayes factor from MCMC samples, using the codes ([Morphology](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/metazoan_hypothesis_test_Luis.Rev), [Genome gene content](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/metazoan_hypothesis_test.Rev)), plot with [R script](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/plot_BF_2.R).  
+Optional - 8. Calculate Bayes factor from MCMC samples, using the codes ([Morphology](https://github.com/PalMuc/triangulation/blob/main/Code/metazoan_hypothesis_test_Luis.Rev), [Genome gene content](https://github.com/PalMuc/triangulation/blob/main/Code/metazoan_hypothesis_test.Rev)), plot with [R script](https://github.com/PalMuc/triangulation/blob/main/Code/plot_BF_2.R).  
 
-Optionally: To convert short format names of Species to full scientific names use [Names_convert.sh](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/Names_convert.sh).
+Optionally: To convert short format names of Species to full scientific names use [Names_convert.sh](https://github.com/PalMuc/triangulation/blob/main/Code/Names_convert.sh).
 
 
 **Homogroups**
 
-For the homologs prediction after DIAMOND analysis step (BLAST all vs. all),[extract length](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/Get_seq_length.sh) of the proteins for each species and run [homomcl](https://github.com/willpett/homomcl) to create abc format file. 
+For the homologs prediction after DIAMOND analysis step (BLAST all vs. all),[extract length](https://github.com/PalMuc/triangulation/blob/main/Code/Get_seq_length.sh) of the proteins for each species and run [homomcl](https://github.com/willpett/homomcl) to create abc format file. 
 
 If you wish to have the final matrix use MCL.
 
@@ -135,44 +135,44 @@ Repeat Homogroups and orthogroups prediction as described above but without the 
 
 *Caenorhabditis elegans*, *Pristionchus pacificus*, and *Schistosoma mansoni*.
 
-Also, combine this taxon sampling with Outgroup sampling section taxa sampling to create the ingroup test datasets - see [Additional information](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Additional%20information/Genome%20gene%20content%20datasets%20protocol.pdf).
+Also, combine this taxon sampling with Outgroup sampling section taxa sampling to create the ingroup test datasets - see [Additional information](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Genome%20gene%20content%20datasets%20protocol.pdf).
 
 Repeat the steps of Orthogroups and Homogroups with the new taxa combination proteomes. 
 
 
 **Pruned**
 
-For datasets creation using the pruning method, use the initial 47 species dataset NEXUS and the script [Nexus_Pruning.sh](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Code/Nexus_Pruning.sh).
+For datasets creation using the pruning method, use the initial 47 species dataset NEXUS and the script [Nexus_Pruning.sh](https://github.com/PalMuc/triangulation/blob/main/Code/Nexus_Pruning.sh).
 
 
 ### The data structure for the genome gene content ###
 
-See file: [ _"Genome gene content datasets protocol"_ ](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Genome%20gene%20content%20datasets%20protocol.pdf)
+See file: [ _"Genome gene content datasets protocol"_ ](https://github.com/PalMuc/triangulation/blob/main/Genome%20gene%20content%20datasets%20protocol.pdf)
 
 ### The output of this analysis ###
 
-To recreate the initial species dataset download all the files in this repository folder [Species_Files](https://github.com/KseniaJuravel/triangulation-juravel-2021/tree/main/Species_Files) ending with *.fasta.xz.
+To recreate the initial species dataset download all the files in this repository folder [Species_Files](https://github.com/PalMuc/triangulation/tree/main/Species_Files) ending with *.fasta.xz.
 
-All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Morphology/Morphology_NEXUS.zip.xz) for the Morphology data and [Run_2.zip.xz](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/NEXUS/Run_2.zip.xz) for the genome gene content second iteration (and in  [Run_1.zip.xz](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/NEXUS/Run_1.zip.xz) for the first iteration).
+All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz) for the Morphology data and [Run_2.zip.xz](https://github.com/PalMuc/triangulation/blob/main/NEXUS/Run_2.zip.xz) for the genome gene content second iteration (and in  [Run_1.zip.xz](https://github.com/PalMuc/triangulation/blob/main/NEXUS/Run_1.zip.xz) for the first iteration).
 
 
 ### Supplementary tables: ###
 
 (In folder Tables)
 
-[Table S1](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Tables/Supplementary%20Table%201%20-%20Species%20data.csv): Information about all the data of species used in this research. 
+[Table S1](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%201%20-%20Species%20data.csv): Information about all the data of species used in this research. 
 
-[Table S2](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Tables/Supplementary%20Table%202%20-%20Run%201%20-%20Convergence%20statistics%20-%20Convergence%20statistics.csv): The summary of all datasets settings and results for run 1.
+[Table S2](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%202%20-%20Run%201%20-%20Convergence%20statistics%20-%20Convergence%20statistics.csv): The summary of all datasets settings and results for run 1.
 
-[Table S3](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Supplementary%20Table%203%20Run%202%20Results%20-%20Stats..csv): The summary of all datasets settings and results for run 2, a summary of all the details and the most probable tree for each of the 190 datasets tested, count of the support for each of the unique topologies observed by the individual posterior trees. 
+[Table S3](https://github.com/PalMuc/triangulation/blob/main/Supplementary%20Table%203%20Run%202%20Results%20-%20Stats..csv): The summary of all datasets settings and results for run 2, a summary of all the details and the most probable tree for each of the 190 datasets tested, count of the support for each of the unique topologies observed by the individual posterior trees. 
 
  Section 3.1 - Row 4 to Row 73 Correspond to datasets in Supplementary Table 4.
  Section 3.2 - Row 74 to Row 193 Correspond to data for different E- and I- values tested (datasets for TPCT in Supplementary Figure 5)
  Section 3.3 - Row 194 to Row 405, Column C and Column AU Correspond to all statistical calculations in Supplementary Figure 4. 
 
-[Table S4](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Tables/Supplementary%20Table%204%20-%20Supp.%20Table%204.pdf): Naming convention description for the long branch attraction tests for ingroups and outgroup-reduced datasets for long branches. 
+[Table S4](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%204%20-%20Supp.%20Table%204.pdf): Naming convention description for the long branch attraction tests for ingroups and outgroup-reduced datasets for long branches. 
 
-[Table S5](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Tables/Supplementary%20Table%205%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
+[Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
 
 
 ### Glossary in this study: ###
@@ -189,11 +189,11 @@ _Granulation_ - defined by the inflation parameter (I) in the MCL algorithm. It 
 
 _Singleton_ - gene family which is coded as present in only a single species.
 
-_Naming convention in this work_ - The initial dataset was Opisthokonta (Opi) and contained data from genomes of 47 species. It was further divided into two subsets: a dataset with only Acoelomorpha (Aco, 44 species) and a dataset with *Xenoturbella bocki* alone (Xen, 41 species). Also, two additional datasets were created for the main Opi dataset and subsets (Aco and Xen), in which Fungi were excluded as outgroups Holozoa (Hol); and Choanozoa (Cho) where only species of the Choanoflagellates were included as outgroups. These are indicated with the three letters abbreviation of the outgroup sampling prefix and the suffix “dis” to distinguish from the next described dataset. Further, the subsets also excluded certain long-branched taxa in the ingroup and identified by the two letters suffix “ne” in the name of the dataset. The methodology type used for taxon reduction is indicated in the naming convention by “Ab'', for ab initio and “P” for pruning (see Supp. Table 5). For more details see Supp. Figure in [Additional information](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Additional%20information/All_graph.p.pdf) and [Genome gene content datasets protocol](https://github.com/KseniaJuravel/triangulation-juravel-2021/blob/main/Additional%20information/Genome%20gene%20content%20datasets%20protocol.pdf).
+_Naming convention in this work_ - The initial dataset was Opisthokonta (Opi) and contained data from genomes of 47 species. It was further divided into two subsets: a dataset with only Acoelomorpha (Aco, 44 species) and a dataset with *Xenoturbella bocki* alone (Xen, 41 species). Also, two additional datasets were created for the main Opi dataset and subsets (Aco and Xen), in which Fungi were excluded as outgroups Holozoa (Hol); and Choanozoa (Cho) where only species of the Choanoflagellates were included as outgroups. These are indicated with the three letters abbreviation of the outgroup sampling prefix and the suffix “dis” to distinguish from the next described dataset. Further, the subsets also excluded certain long-branched taxa in the ingroup and identified by the two letters suffix “ne” in the name of the dataset. The methodology type used for taxon reduction is indicated in the naming convention by “Ab'', for ab initio and “P” for pruning (see Supp. Table 5). For more details see Supp. Figure in [Additional information](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/All_graph.p.pdf) and [Genome gene content datasets protocol](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Genome%20gene%20content%20datasets%20protocol.pdf).
 
 ### The data structure in the deposited folders: ###
 
-All morphology-related files can be found in [Morphology/](https://github.com/KseniaJuravel/triangulation-juravel-2021/tree/main/Morphology)
+All morphology-related files can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
 
 Three hundred forty-seven directories of genome gene content data (~3 T, compressed 645 GB - too large to be stored here) can be provided upon request.
 
