@@ -20,7 +20,7 @@ An accurate phylogeny of animals is needed to clarify their evolution, ecology, 
 ## Description ##
 This repository includes all the codes used to analyze the data for the various phylogenies.
 
-For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_files.zip).
+For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz).
 
 For the genome gene content analysis, the results obtained in the different steps can be provided upon request, because the file is too big for the repository, it has ~3 TB size uncompressed. 
 
@@ -153,7 +153,7 @@ See file: [ _"Genome gene content datasets protocol"_ ](https://github.com/PalMu
 
 To recreate the initial species dataset download all the files in this repository folder [Species_Files](https://github.com/PalMuc/triangulation/tree/main/Species_Files) ending with *.fasta.xz.
 
-All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz) for the Morphology data and [Run_2.zip.xz](https://github.com/PalMuc/triangulation/blob/main/NEXUS/Run_2.zip.xz) for the genome gene content second iteration (and in  [Run_1.zip.xz](https://github.com/PalMuc/triangulation/blob/main/NEXUS/Run_1.zip.xz) for the first iteration).
+All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz) for the Morphology data and [Run_2.zip.xz](https://github.com/PalMuc/triangulation/blob/main/data_matrices_gene_content/Run_2.zip.xz) for the genome gene content second iteration (and in  [Run_1.zip.xz](https://github.com/PalMuc/triangulation/blob/main/data_matrices_gene_content/Run_1.zip.xz) for the first iteration).
 
 
 ### Supplementary tables: ###
@@ -164,7 +164,7 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
 
 [Table S2](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%202%20-%20Run%201%20-%20Convergence%20statistics%20-%20Convergence%20statistics.csv): The summary of all datasets settings and results for run 1.
 
-[Table S3](https://github.com/PalMuc/triangulation/blob/main/Supplementary%20Table%203%20Run%202%20Results%20-%20Stats..csv): The summary of all datasets settings and results for run 2, a summary of all the details and the most probable tree for each of the 190 datasets tested, count of the support for each of the unique topologies observed by the individual posterior trees. 
+[Table S3](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%203%20-%20Run%202%20-%20Results%20-%20Stats..csv): The summary of all datasets settings and results for run 2, a summary of all the details and the most probable tree for each of the 190 datasets tested, count of the support for each of the unique topologies observed by the individual posterior trees. 
 
  Section 3.1 - Row 4 to Row 73 Correspond to datasets in Supplementary Table 4.
  Section 3.2 - Row 74 to Row 193 Correspond to data for different E- and I- values tested (datasets for TPCT in Supplementary Figure 5)
@@ -172,7 +172,7 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
 
 [Table S4](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%204%20-%20Supp.%20Table%204.pdf): Naming convention description for the long branch attraction tests for ingroups and outgroup-reduced datasets for long branches. 
 
-[Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
+[Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20-%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
 
 
 ### Glossary in this study: ###
