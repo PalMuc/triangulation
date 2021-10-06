@@ -145,6 +145,16 @@ Repeat the steps of Orthogroups and Homogroups with the new taxa combination pro
 For datasets creation using the pruning method, use the initial 47 species dataset NEXUS and the script [Nexus_Pruning.sh](https://github.com/PalMuc/triangulation/blob/main/Code/Nexus_Pruning.sh).
 
 
+### The potential biasing effect of poor quality genomes ###
+
+The current available genomes are not perfect. 
+Therefore their imperfection might lead to misplacing of the different nodes when placed base on genome gene content. 
+To check for this assumption several tested were conducted.
+
+Replace 0 by ? in selected nodes.
+Use the code: species_0_to_?.sh, change the if statement for your species of interest.
+
+
 ### The data structure for the genome gene content ###
 
 See file: [ _"Genome gene content datasets protocol"_ ](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Genome%20gene%20content%20datasets%20protocol.pdf).
