@@ -152,7 +152,7 @@ Therefore their imperfection might lead to misplacing of the different nodes whe
 To check for this assumption several tested were conducted.
 
 Replace 0 by ? in selected nodes.
-Use the code: species_0_to_?.sh, change the if statement for your species of interest.
+Use the code: [species_0_to_?.sh](https://github.com/PalMuc/triangulation/blob/main/Code/species_0_to_%3F.sh), change the if statement for your species of interest.
 
 
 ### The data structure for the genome gene content ###
