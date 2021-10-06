@@ -200,5 +200,5 @@ Three hundred forty-seven directories of genome gene content data (~3 T, compres
 
 ### Who do I talk to if I have questions or problems? ###
 
-* for technical questions about genome gene content analyses: Ksenia Juravel (k.juravel@palmuc.org)
+* for technical questions about genome gene content analyses or BF: Ksenia Juravel (k.juravel@palmuc.org)
 * for technical questions about morphology analyses: Luis Porras (l.porras@palmuc.org)
