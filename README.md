@@ -25,9 +25,15 @@ For the morphology analysis, the results obtained in the different steps can be 
 For the genome gene content analysis, the results obtained in the different steps can be provided upon request, because the file is too big for the repository, it has ~3 TB size uncompressed. 
 
 
-All the steps are listed and described below.
+All the steps are listed and described below, for an overview see Figure 1.
 
-### General workflow for genome gene content analysis: ###
+![Alt text](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Figure1.png)
+
+**Figure 1:** Concise graphical illustration of the methodology and workflow used for the creation of the different datasets analysed (For the illustration of the complete steps of the gene content dataset creation see)
+
+## Workflow for genome gene content analysis: ##
+
+### Structure of workflow steps: ###
 
 1. Extract proteins from genome based predictions for species of interest. 47 species were used here.
 2. Check for similarity all vs. all.
@@ -36,8 +42,6 @@ All the steps are listed and described below.
 5. Convert into matrices of absence and presence.
 6. Generate phylogeny.
 7. (Statistical investigation)
-
-![Alt text](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Figure1.png)
 
 ### Programs used: ###
 
