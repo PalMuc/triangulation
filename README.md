@@ -20,10 +20,10 @@ An accurate phylogeny of animals is needed to clarify their evolution, ecology, 
 ## Description ##
 This repository includes all the codes used to analyze the data for the various phylogenies.
 
+All morphology-related files can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
 For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz).
 
-For the genome gene content analysis, the results obtained in the different steps can be provided upon request, because the file is too big for the repository, it has ~3 TB size uncompressed. 
-
+For the genome gene content analysis, three hundred forty-seven directories of genome gene content data that contain all the results from the different steps of the pipeline (uncompressed ~3 TB, compressed 645 GB - too large to be stored here) can be provided upon request. 
 
 All the steps are listed and described below, for an overview see Figure 1.
 
@@ -191,13 +191,10 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
 [Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20-%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
 
 ## General workflow for morphology analysis: ##
-Luis to fill in
 
-## The data structure in the deposited folders: ##
+**Luis to fill in**
 
-All morphology-related files can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
 
-Three hundred forty-seven directories of genome gene content data (~3 T, compressed 645 GB - too large to be stored here) can be provided upon request.
 
 ## Glossary in this study: ##
 
@@ -216,7 +213,7 @@ _Singleton_ - gene family which is coded as present in only a single species.
 _Naming convention in this work_ - The initial dataset was Opisthokonta (Opi) and contained data from genomes of 47 species. It was further divided into two subsets: a dataset with only Acoelomorpha (Aco, 44 species) and a dataset with *Xenoturbella bocki* alone (Xen, 41 species). Also, two additional datasets were created for the main Opi dataset and subsets (Aco and Xen), in which Fungi were excluded as outgroups Holozoa (Hol); and Choanozoa (Cho) where only species of the Choanoflagellates were included as outgroups. These are indicated with the three letters abbreviation of the outgroup sampling prefix and the suffix “dis” to distinguish from the next described dataset. Further, the subsets also excluded certain long-branched taxa in the ingroup and identified by the two letters suffix “ne” in the name of the dataset. The methodology type used for taxon reduction is indicated in the naming convention by “Ab'', for ab initio and “P” for pruning (see Supp. Table 5). For more details see Supp. Figure in [Additional information](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/All_graph.p.pdf) and [Genome gene content datasets protocol](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Genome%20gene%20content%20datasets%20protocol.pdf).
 
 
-### Who do I talk to if I have questions or problems? ###
+## Who do I talk to if I have questions or problems? ##
 
 * for technical questions about genome gene content analyses or BF: Ksenia Juravel (k.juravel@palmuc.org)
 * for technical questions about morphology analyses: Luis Porras (l.porras@palmuc.org)
