@@ -190,8 +190,16 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
 
 [Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20-%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
 
+## General workflow for morphology analysis: ##
+Luis to fill in
 
-### Glossary in this study: ###
+## The data structure in the deposited folders: ##
+
+All morphology-related files can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
+
+Three hundred forty-seven directories of genome gene content data (~3 T, compressed 645 GB - too large to be stored here) can be provided upon request.
+
+## Glossary in this study: ##
 
 _Homogroups_ - A set including homologous proteins that are predicted to be inherited from a common ancestor, all the proteins or parts, can include partial genes, orthologs, xenologs and paralogs. Contain any subset of the species, but no single species homogroups (proteins need to be shared by at least two species).
 
@@ -206,15 +214,6 @@ _Granulation_ - defined by the inflation parameter (I) in the MCL algorithm. It 
 _Singleton_ - gene family which is coded as present in only a single species.
 
 _Naming convention in this work_ - The initial dataset was Opisthokonta (Opi) and contained data from genomes of 47 species. It was further divided into two subsets: a dataset with only Acoelomorpha (Aco, 44 species) and a dataset with *Xenoturbella bocki* alone (Xen, 41 species). Also, two additional datasets were created for the main Opi dataset and subsets (Aco and Xen), in which Fungi were excluded as outgroups Holozoa (Hol); and Choanozoa (Cho) where only species of the Choanoflagellates were included as outgroups. These are indicated with the three letters abbreviation of the outgroup sampling prefix and the suffix “dis” to distinguish from the next described dataset. Further, the subsets also excluded certain long-branched taxa in the ingroup and identified by the two letters suffix “ne” in the name of the dataset. The methodology type used for taxon reduction is indicated in the naming convention by “Ab'', for ab initio and “P” for pruning (see Supp. Table 5). For more details see Supp. Figure in [Additional information](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/All_graph.p.pdf) and [Genome gene content datasets protocol](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Genome%20gene%20content%20datasets%20protocol.pdf).
-
-## General workflow for morphology analysis: ##
-Luis to fill in
-
-## The data structure in the deposited folders: ##
-
-All morphology-related files can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
-
-Three hundred forty-seven directories of genome gene content data (~3 T, compressed 645 GB - too large to be stored here) can be provided upon request.
 
 
 ### Who do I talk to if I have questions or problems? ###
