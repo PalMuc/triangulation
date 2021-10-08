@@ -1,4 +1,4 @@
-*This is a data repository of the working paper*
+***This is a data repository of the working paper***
 
 # Analyses of genome gene content and morphology improve resolution of recalcitrant nodes in the animal tree of life #
 
@@ -29,7 +29,7 @@ All the steps are listed and described below, for an overview see Figure 1.
 
 ![Alt text](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Figure1.png)
 
-**Figure 1:** Concise graphical illustration of the methodology and workflow used for the creation of the different datasets analysed (For the illustration of the complete steps of the gene content dataset creation see)
+**Figure 1:** Concise graphical illustration of the methodology and workflow used for the creation of the different datasets analysed (For the illustration of the complete steps of the gene content dataset creation see ![Alt text](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/All_graph.p.pdf)
 
 ## Workflow for genome gene content analysis: ##
 
