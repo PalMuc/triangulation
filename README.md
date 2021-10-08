@@ -1,6 +1,6 @@
 *This is a data repository of the working paper*
 
-# Towards resolving controversial nodes in the animal tree of life #
+# Analyses of genome gene content and morphology improve resolution of recalcitrant nodes in the animal tree of life #
 
 Juravel, Ksenia 1; Porras, Luis 1; Höhna, Sebastian 1,2; Pisani, Davide 3; Wörheide, Gert 1,2,4, §
 
