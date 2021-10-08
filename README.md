@@ -20,8 +20,8 @@ An accurate phylogeny of animals is needed to clarify their evolution, ecology, 
 ## Description ##
 This repository includes all the codes used to analyze the data for the various phylogenies.
 
-All **morphology related files** can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
-For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz).
+All **morphology related files** can be found in the folder [Morphology](https://github.com/PalMuc/triangulation/tree/main/Morphology).  
+The results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz).
 
 All **genome gene content related files** needed to reproduce the results can be found in the following folders:  
 [Species_Files](https://github.com/PalMuc/triangulation/blob/main/Species_Files/): The 47 proteomes needed as base data for all subsequent steps of dataset construction.  
