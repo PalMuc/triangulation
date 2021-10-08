@@ -29,7 +29,7 @@ All the steps are listed and described below, for an overview see Figure 1.
 
 ![Alt text](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/Figure1.png)
 
-**Figure 1:** Concise graphical illustration of the methodology and workflow used for the creation of the different datasets analysed (For the illustration of the complete steps of the gene content dataset creation see ![Alt text](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/All_graph.p.pdf)
+**Figure 1:** Concise graphical illustration of the methodology and workflow used for the creation of the different datasets analysed (See the [complete steps](https://github.com/PalMuc/triangulation/blob/main/Additional%20information/All_graph.p.pdf) of gene content dataset creation for more detailed information.
 
 ## Workflow for genome gene content analysis: ##
 
