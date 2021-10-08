@@ -20,10 +20,15 @@ An accurate phylogeny of animals is needed to clarify their evolution, ecology, 
 ## Description ##
 This repository includes all the codes used to analyze the data for the various phylogenies.
 
-All morphology-related files can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
+All **morphology related files** can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
 For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz).
 
-For the genome gene content analysis, three hundred forty-seven directories of genome gene content data that contain all the results from the different steps of the pipeline (uncompressed ~3 TB, compressed 645 GB - too large to be stored here) can be provided upon request. 
+All **genome gene content related files** needed to reproduce the results can be found in the following folders:
+[47 proteomes](https://github.com/PalMuc/triangulation/blob/main/Species_Files/): needed as base data for all subsequent steps of dataset construction.
+[Code](https://github.com/PalMuc/triangulation/blob/main/Code/): all code/scripts needed to carry out the analyses, from dataset construction to phylogenetic analyses.
+[Data matrices](https://github.com/PalMuc/triangulation/blob/main/data_matrices_gene_content/) all data matrices analysed.
+
+Three hundred forty-seven directories of genome gene content data that contain all the results from the different intermediate steps of dataset construction (uncompressed ~3 TB, compressed 645 GB) are too large to be provided here but can be provided upon request. 
 
 All the steps are listed and described below, for an overview see Figure 1.
 
