@@ -23,11 +23,9 @@ This repository includes all the codes used to analyze the data for the various 
 All **morphology related files** can be found in [Morphology/](https://github.com/PalMuc/triangulation/tree/main/Morphology)
 For the morphology analysis, the results obtained in the different steps can be found in [Morphology/Morphology_files.zip](https://github.com/PalMuc/triangulation/blob/main/Morphology/Morphology_NEXUS.zip.xz).
 
-All **genome gene content related files** needed to reproduce the results can be found in the following folders:
-[47 proteomes](https://github.com/PalMuc/triangulation/blob/main/Species_Files/): needed as base data for all subsequent steps of dataset construction.
-
-[Code](https://github.com/PalMuc/triangulation/blob/main/Code/): all code/scripts needed to carry out the analyses, from dataset construction to phylogenetic analyses.
-
+All **genome gene content related files** needed to reproduce the results can be found in the following folders:  
+[47 proteomes](https://github.com/PalMuc/triangulation/blob/main/Species_Files/): needed as base data for all subsequent steps of dataset construction.  
+[Code](https://github.com/PalMuc/triangulation/blob/main/Code/): all code/scripts needed to carry out the analyses, from dataset construction to phylogenetic analyses.  
 [Data matrices](https://github.com/PalMuc/triangulation/blob/main/data_matrices_gene_content/) all data matrices analysed.
 
 374 directories of genome gene content data that contain all the results from the different intermediate steps of dataset construction are too large to be provided here (uncompressed ~3 TB, compressed 645 GB) but can be provided upon request. 
