@@ -1,0 +1,777 @@
+List of morphological characters. GO09 = (Goloboff et al., 2009), DE18 = (Deline et al., 2018), PE01 = (Peterson & Eernisse, 2001). 
+The number after the semicolon indicates the number of the character in the original character list. 
+Characters that do not have a prefix are characters that are not present in either of the three datasets. 
+These new characters are taken from the literature as mentioned in the supplementary material section about character sampling. 
+Character states are absent/present unless something else is specified. 
+Contingencies are specified for the reductive version of the morphological matrix. 
+
+1. GO09:80. Cell wall with chitin and B-glucan, at least in spores.
+2. GO09:81. AAA route of lysine.
+3. Mycelium composed of hyphae at some point of the life cycle. Present in Fungi except Saccharomyces cerevisiae.
+4. Saprotrophic nutrition.
+5. GO09:82. Dikaryotic hyphae.
+6. Loss of flagellated stage in reproduction.
+7. Septate hyphae.
+8. GO09:86. Multilamellar cell wall.
+9. GO09:87. Basidiocarp and basidiohymenio.
+10. GO09:88. Tetrapolar sexual compatibility.
+11. Ascospores.
+12. GO09:83. Ascocarp.
+13. GO09:84. Woronin bodies.
+14. GO09:85. Croziers.
+15. GO09:79. Collar complexes. Present in Porifera and Choanoflagellata.
+16. Theca.
+17. Microfibrillar stalk.
+18. DE18:12. Diploid zygote without alternation of generations. Present in Metazoa. Modified to be specific to metazoan zygotes. Other eukaryotes go through similar stages, but they eventually lead to haploid stages. The only haploid stage in metazoans is the gamete.
+19. DE18:13. Ontogenesis.
+20. DE18:14. Spermatogenesis: four structurally identical sperm from one spermatocyte.
+21. DE18:17. Sperm cilia. Contingent on char.20.
+22. DE18:19. Oogenesis: one fertilisable egg and three abortive polar bodies from one oocyte.
+23. DE18:21. Somatic differentiation. Contingent on char.19.
+24. DE18:22. Impermeable cell-cell connections. Contingent on char.19.
+25. PE01:2. Multicellularity with extracellular matrix: absent=0, present=1, present but with reduced or absent ECM=2. Present in Metazoa, reduced in Acoela. Contingent on char.19.
+26. PE01:9. Cross-striated rootlets. Present in Metazoa except Demospongiae.
+27. PE01:27. Blastula stage. Contingent on char.19.
+28. DE18:24. Aquiferous system through the body of the sponge with canals and chambers. Contingent on char.23.
+29. DE18:25. Mesohyl as the interior of the sponge body. Contingent on char.23.
+30. DE18:26. Biphasic lifecycle with plankton larvae (coeloblastula). Contingent on char.23.
+31. DE18:27. Filter feeding, sessile adult. Contingent on char.23.
+32. DE18:28. Choanocytes. Contingent on char.23.
+33. Sclerocytes. Contingent on char.23.
+34. DE18:31. Existence of sclerocytes, which intracellularly secrete a spicule made of SiO2 around an axial filament made of scleroprotein. Contingent on char.33.
+35. DE18:32. Existence of spongioblasts which secrete the scleroprotein spongin in the mesohyl. Contingent on char.23.
+36. DE18:30. Existence of sclerocytes which extracellularly secrete calcareous spicules without an axial filament. Contingent on char.33.
+37. DE18:35. Glandular cells in the epithelium that produces exoenzymes for extracellular digestion. Contingent on char.23.
+38. PE01:11. Belt desmosomes. Present in Epitheliozoa. Contingent on char.19.
+39. GO09:92. Outer epithelia with septate or tight junctions. Contingent on char.23.
+40. GO09:89. Homeobox-containing genes.
+41. DE18:39. Epithelial linking of cells by means of the development of zonulae adherentes. Contingent on char.23.
+42. DE18:40. Contractile fiber cells in the intermediate layer of the body. Contingent on char.23.
+43. DE18:41. Cilia of the ventral cylindrical cells have two horizontal ciliary rootlets in addition to the vertical main rootlet. Contingent on char.23.
+44. DE18:36. Localised gonads. Unknown for Placozoa. Present in Eumetazoa except Xenoturbella bocki. Contingent on char.23.
+45. DE18:37. Ciliated epidermal cells. Present in Epitheliozoa except Ecdysozoa. Contingent on char.23.
+46. DE18:38. Differentiation of two epithelial layers. Present in Epitheliozoa. Contingent on char.23.
+47. PE01:99. Nerve cells. Present in Eumetazoa. Contingent on char.23.
+48. DE18:44. Nerves at the base of the epithelia join and form a diffuse network. Present in Ctenophora and Cnidaria. Contingent on char.47.
+49. DE18:45. Monociliated sensory cells. Contingent on char.23.
+50. DE18:46. Ectoderm completely surrounds the body. Contingent on char.23.
+51. DE18:47. Endoderm. Contingent on char.23.
+52. DE18:48. Gap junctions between neighbouring cells. Absent in Hexacorallia. Contingent on char.23.
+53. PE01:5. Hemidesmosomes. Present Eumetazoa. Contingent on char.23.
+54. PE01:12. Basal lamina. Present in Eumetazoa. Contingent on char.23.
+55. Muscle cells. Contingent on char.23.
+56. PE01:92. Digestive gut: absent=0, present=1, present without epithelium=2. Present in Eumetazoa except Acoela which is coded 2. Contingent on char.23.
+57. PE01:45. Apical organ/tuft. Present in Eumetazoa except Ecdysozoa, Xenacoelomorpha, Schistosoma mansoni, Helobdella robusta and Chordata. Contingent on char.23.
+58. PE01:32. Gastrulation. Present in Eumetazoa, unknown for Placozoa. Contingent on char.19.
+59. PE01:25. Apical/blastoporal axis. Contingent on char.23.
+60. GO09:102. Synapses with acetylcholine. Present in Neuralia including cnidarians unlike the original coding. Contingent on char.47.
+61. DE18:79. Two tentacles with collocytes. Contingent on char.23.
+62. DE18:80. Biradial symmetry with sagittal and transverse planes. Contingent on char.23.
+63. DE18:81. Medusa with cellular mesoglea. Contingent on char.23.
+64. DE18:82. Biradial cleavage. Contingent on char.19.
+65. DE18:83. Mosaic development. Contingent on char.19.
+66. DE18:84. Oral direction of movement. Contingent on char.23.
+67. DE18:85. Gastrovascular system with an axial and a peripheral section. Contingent on char.23.
+68. DE18:86. Position of the gonads in the wall of the meridional canals. Contingent on char.44.
+69. DE18:87. Statocyst and two polar fields at the aboral pole. Contingent on char.23.
+70. DE18:88. Eight comb rows which are the primary means of locomotion. Contingent on char.23.
+71. GO09:121. Cydippid larval stage. Contingent on char.23.
+72. DE18:16. Sperm mid-section has mitochondria. The coding of this character has been generalised. Sperm morphology is highly variable, but the presence of a defined midsection that contains the mitochondria is restricted to Bilateria and Cnidaria. Contingent on char.20.
+73. DE18:89. Bilateral symmetry. The coding of this character was modified to represent the general idea of having a bilateral body, which is also present in some cnidarians. The more specialised body architecture of bilaterians is represented  by character (PE01:26). Present in Hexacorallia and Bilateria except Echinodermata. Contingent on char.23.
+74. DE18:49. Tentacles. Contingent on char.23.
+75. DE18:50. Sessile polyp. Contingent on char.23.
+76. DE18:51. Planula larvae. Present in Cnidaria except Hydra magnipapillata. Contingent on char.23.
+77. DE18:52. Cnidae as products of individual cells, the cnidocytes or cnidoblasts. Contingent on char.23.
+78. DE18:53. Septa in the polyp. Contingent on char.23.
+79. DE18:55. Ectodermal actinopharynx, which runs from a flat, oral disk and sinks deep into the coelenteron. Contingent on char.23.
+80. DE18:56. Ciliated siphonoglyphs which transport water into the coelenteron. Contingent on char.23.
+81. DE18:57. Spirocysts. Contingent on char.23.
+82. DE18:60. Endodermal ring canal. Contingent on char.23.
+83. DE18:61. Microbasic eurytele. Contingent on char.23.
+84. DE18:62. Mitochondrial DNA molecule is linear. This feature is specifically coded to represent the medusozoan synapomorphy and as such is only present in Hydra magnipapillata.
+85. DE18:63. Cnidocyte has a stiff cnidocil apparatus for discharge of nematocysts. Contingent on char.23.
+86. GO09:110. Location of gonads in epidermis. Contingent on char.44.
+87. DE18:90. Mesoderm. Contingent on char.19.
+88. DE18:92. Body wall musculature made up of outer circular muscles. Absent in the Nematoida. Contingent on char.55.
+89. DE18:93. Body wall musculature made up of inner longitudinal muscles. Contingent on char.55.
+90. DE18:94. Central nervous system. Present in Bilaterians except Xenacoelomorpha. This character reflects the presence of a clearly defined nervous system with cords, centralized nervous organs and/or brains. Although some xenacoelomorphs possess more structurally complex organizations, xenoturbellids and many other acoelomorphs have a simple nervous net which is considered to be the plesiomorphic condition of their groundplan. Contingent on char.47.
+91. PE01:26. Dorsal/ventral axis. There is some overlap between bilateral symmetry and the DV axis, but they are not exactly the same. This character reflects the further differentiation of the body regions. Present in Bilateria except Echinodermata. Contingent on char.73.
+92. DE18:134. Shaft region in epidermal cilia. In the original set this character was coded present in only acoels and nemertodermatids, but this feature is also present in xenoturbellids. Contingent on char.23.
+93.PE01:15. Distinct “step” in cilia.
+94. DE18:135. Network formed by interconnecting rootlets of epidermal cilia. Contingent on char.23.
+95. DE18:133. Statocyst with one statolith and two parietal cells. The original coding of this character included both acoels and nemertodermatids, but this is only the case present in acoels according to character (DE18:136). Contingent on char.23.
+96. DE18:137. Spiral duet cleavage. Contingent on char.19.
+97. DE18:138. Sperm cilia enclosed within the sperm body. Contingent on char.20.
+98. DE18:139. Further differentiation of the root system of epidermal cilia by the addition of lateral rootlets. Contingent on char.23.
+99. GO09:132. Body wall musculature as U-shape muscles. Contingent on char.55.
+100. GO09:133. Body wall musculature as crossover muscles. Contingent on char.55.
+101. DE18:136. Statocyst with two statoliths and many parietal cells. Contingent on char.23.
+102. DE18:183. Free monociliated 'statolith-like' cells. Contingent on char.23.
+103. DE18:184. Subepidermal membrane complex. Contingent on char.23.
+104. DE18:185. Cilia of epidermal cells with three rootlets. Contingent on char.23.
+105. DE18:186. Narrow epidermal ciliated cells, each with a supporting fiber composed of bundles of filaments. Contingent on char.23.
+106. Excretory organs. Present in Bilateria except Ciona intestinalis and Xenacoelomorpha. Protonephridia, metanephridia, kidneys and other specialized excretory organs are very different in terms of their microanatomy, but their phylogenetic distribution, functionality and molecular signature supports a shared origin. Contingent on char.23.
+107. DE18:187. Anus is separate from mouth. Contingent on char.56.
+108. Schizocoely. The coding of this character was generalised to reflect a feature commonly associated with Protostomia. The mode of development is highly variable and some protostomes have more deuterostome-like embryologies, but none of the major groups that have those are present in our sample. Contingent on char.19.
+109. DE18:1136. Chitin in the basal, fine fibrillary layer. Contingent on char.23.
+110. DE18:1137. Repeated moltings in development. Contingent on char.23.
+111. PE01:79. Trilaminate epicuticle. Present in Ecdysozoa. Contingent on char.23.
+112. PE01:80. Trilayered cuticle. Present in Ecdysozoa. Contingent on char.23.
+113. DE18:1124. Brain as a nerve ring around the anterior of the pharynx. Contingent on char.47.
+114. DE18:1138. Nerve ring of uniform thickness. Contingent on char.47.
+115. DE18:1139. Frontocaudal division of the brain into three sections: anterior perikarya, middle neuropil and posterior perikarya. Contingent on char.47.
+116. DE18:1140. Close combination of the paired main longitudinal nerve cords on the ventral side. Contingent on char.47.
+117. DE18:1141. Ventral paired nerve cord. Contingent on char.47.
+118. DE18:1142. Long, thin body. Contingent on char.23.
+119. DE18:1143. Chitin confined to earlier stages of development. Contingent on char.23.
+120. DE18:1144. Undulatory movements of the body. Contingent on char.23.
+121. DE18:1145. Dorsal and ventral inward reaching epidermal cords in which the corresponding nerve cords run. Contingent on char.47.
+122. DE18:1146. Ventral main nerves fused caudally. Contingent on char.47.
+123. DE18:1147. Dorsal nerve cord is paired. Contingent on char.47.
+124. DE18:1148. Dorsal nerve cord is unpaired. Contingent on char.47.
+125. DE18:1150. Paired spicula in the male as anchoring organs. Contingent on char.23.
+126. DE18:1151. Lateral epidermal cords. Contingent on char.23.
+127. DE18:1152. Postembryogenesis with four juvenile stages. Contingent on char.23.
+128. DE18:1153. Pharynx with triradiate Y-shaped lumen. Contingent on char.56.
+129. DE18:1154. Ventral glands and caudal glands. Contingent on char.23.
+130. DE18:1155. Undulations are dorsoventral. Contingent on char.23.
+131. DE18:1156. Gonads have opposing orientation. Contingent on char.44.
+132. DE18:1157. Vulva in the middle of the female. Contingent on char.23.
+133. DE18:1158. Cloaca in the male. Contingent on char.23.
+134. DE18:1159. Sensilla at the anterior end arranged in a 6+6+4 pattern. Contingent on char.23.
+135. DE18:1160. Lateral organs. Contingent on char.23.
+136. DE18:402. Paired walking appendages on repeated segments. Contingent on char.23.
+137. DE18:397. Appendages with claws. Contingent on char.136.
+138. DE18:401. Antennae on segment one. Present in Daphnia pulex and Drosophila melanogaster. Contingent on char.136.
+139. GO09:167. Dorsal heart with segmental ostia and pericardial sinus. Contingent on char.23.
+140. DE18:405. Alpha-chitin cuticle. Contingent on char.23.
+141. DE18:406. Body cavity with pericardial septum. Contingent on char.23.
+142. DE18:407. Superficial radial cleavage. Contingent on char.19.
+143. DE18:409. Nephridia with sacculi. Contingent on char.106.
+144. DE18:418. Labrum. Contingent on char.23.
+145. DE18:419. Arthropodium. Contingent on char.136.
+146. GO09:170. Sclerotization of cuticle into hard, articulated exoskeleton. Contingent on char.23.
+147. DE18:420. Fourth segment forms head. Contingent on char.146.
+148. DE18:422. Ventral germ band. Contingent on char.23.
+149. DE18:423. Separate cross-striated muscle cords. Contingent on char.55.
+150. DE18:424. Brain has deutocerebrum. Contingent on char.47.
+151. DE18:426. Brain has protocerebrum. Contingent on char.47.
+152. DE18:427. Median ocelli. Contingent on char.47.
+153. DE18:429. Compound eyes. Contingent on char.47.
+154. DE18:430. Ommatidia with corneal lens. Contingent on char.47.
+155. DE18:431. Retinula cells. Contingent on char.47.
+156. DE18:432. Sensory cells with stereocila. Contingent on char.23.
+157. DE18:433. Six pairs of nephridia. Contingent on char.106.
+158. PE01:91. Food modified with limbs. Contingent on char.136.
+159. GO09:171. Tendon cells with tonofilaments penetrating epidermis. Contingent on char.23.
+160. GO09:172. Resilin protein. Contingent on char.23.
+161. GO09:174. Cephalic ecdysial glands. Contingent on char.23.
+162. GO09:381. Haemal system. Contingent on char.23.
+163. DE18:434. Chelicerae are made of three parts with a distal pincer portion. Contingent on char.136.
+164. DE18:435. Prosoma segment two has chelicerae. Contingent on char.146.
+165. DE18:438. Prosoma made of acron and seven segments. Contingent on char.146.
+166. DE18:439. Opisthosoma. Contingent on char.146.
+167. DE18:442. Genital opercula on mesosoma segment two. Contingent on char.146.
+168. DE18:443. Eyes inverted and in rows. Contingent on char.153.
+169. DE18:453. Buccal nerve ring with proto- and tritocerebrum anteriorly. Contingent on char.47.
+170. DE18:454. Two median eyes. Contingent on char.152.
+171. DE18:460. First leg pair become pedipalps. Contingent on char.136.
+172. DE18:461. Chilaria fused to form a metasternum. Contingent on char.136.
+173. DE18:462. Terrestrialisation. This character is specific to the terrestrialisation of chelicerates.
+174. DE18:463. Precerebral sucking pump from the pharynx. Contingent on char.56.
+175. DE18:464. Extraintestinal feeding. Contingent on char.56.
+176. DE18:465. Increased ganglion ring with union of further pairs of ganglia into the buccal nerve ring. Contingent on char.47.
+177. DE18:466. Plate-shaped appendages on opisthosoma fuse to form lung plates. Contingent on char.136.
+178. DE18:467. Four pairs of booklungs on segment 3-6. Contingent on char.136.
+179. DE18:468. Indirect sperm transfer - spermatophores are deposited before females takes them up internally. Contingent on char.20.
+180. DE18:470. Unpaired genital opening from fusion. Contingent on char.23.
+181. DE18:471. Division of compound eyes into lateral pairs of eyes with ommatidia and retinula cells under cornea. Contingent on char.153.
+182. DE18:472. Five pairs of lateral eyes. Contingent on char.153.
+183. DE18:473. Trichobothrium. Contingent on char.47.
+184. DE18:474. Slit sense organs. Contingent on char.47.
+185. DE18:475. Nephridia of segment four. Contingent on char.106.
+186. DE18:476. Nephridia of segment six. Contingent on char.106.
+187. DE18:477. Malpighian tubules. The homology of insect and arachnid malphigian tubules is generally rejected.  Contingent on char.56.
+188. DE18:483. Two pairs of booklungs. Contingent on char.136.
+189. DE18:484. Coiled, immobile sperm. Contingent on char.20.
+190. DE18:485. Uniform retinal cells with microvillar fringes in lateral eyes. Contingent on char.23.
+191. DE18:486. Slit sense organs form lyriform organs. Contingent on char.184.
+192. DE18:533. Trachaea with a pair of spiracles on opisthosoma segment three. Contingent on char.146.
+193. DE18:534. Two pairs of lateral eyes. Contingent on char.153.
+194. DE18:557. Larvae with six legs. Contingent on char.136.
+195. DE18:558. Three nymph stages. Contingent on char.136.
+196. DE18:566. Gnathosoma. Contingent on char.146.
+197. DE18:567. Idiosoma. Contingent on char.146.
+198. DE18:568. Broad fusion of opisthosoma and prosoma. Contingent on char.166.
+199. GO09:318. Four pairs of legs. Contingent on char.136.
+200. DE18:570. Second antennae. Present in Daphnia pulex. Contingent on char.136.
+201. DE18:571. Second maxilla. Contingent on char.136.
+202. DE18:572. First maxilla. Contingent on char.136.
+203. DE18:573. Mandibles on the third head segment. Contingent on char.136.
+204. DE18:574. Mandibles with palps. Contingent on char.136.
+205. DE18:575. First maxilla with palps. Contingent on char.136.
+206. DE18:576. Second maxilla with palps. Contingent on char.136.
+207. DE18:577. Fifth segment on head. Contingent on char.146.
+208. DE18:578. Molt gland. Contingent on char.23.
+209. DE18:579. Four-part crystalline cone with four cone cells. Contingent on char.153.
+210. DE18:580. Constant eight retinula cells forming the rhabdome. Contingent on char.153.
+211. DE18:581. Crystalline cone in ommatidia. Contingent on char.153.
+212. DE18:582. Corneal lens secreted by two corneageous cells. Contingent on char.153.
+213. GO09:178. Tripartite brain. Contingent on char.47.
+214. DE18:585. Nauplius larva. Contingent on char.136.
+215. DE18:586. Nephridia on segment two. Contingent on char.146.
+216. DE18:587. Nephridia on segment five. Contingent on char.146.
+217. DE18:595. Thorax. Contingent on char.146.
+218. DE18:596. Abdomen. Contingent on char.146.
+219. DE18:597. Turgor appendages with epipodites for feeding. Contingent on char.136.
+220. DE18:599. Phyllopodia with loss of articles in podites form turgor appendages. Contingent on char.136.
+221. DE18:600. Filtration from open water. In the case of Daphnia pulex this filtration is done via appendages. Contingent on char.136.
+222. DE18:607. Carapace as a bivalved shell. Contingent on char.146.
+223. DE18:609. Sessile compound eyes. Contingent on char.153.
+224. DE18:610. Strongly developed biramous second antennae with locomotory function. Contingent on char.136.
+225. DE18:611. Short legless abdomen folded downward ventrally. Contingent on char.146.
+226. DE18:612. First thoracopod of the male with hooks for copulation. Contingent on char.136.
+227. DE18:613. Dorsal telson with a pair of long setae. Contingent on char.136.
+228. DE18:614. Branches of the furca differentiated into backward-directed claws. Contingent on char.136.
+229. DE18:615. Carapace with growth rings. Contingent on char.222.
+230. DE18:616. Deposition of the eggs in a dorsal shell space between the carapace and the back of the thorax. Contingent on char.222.
+231. DE18:617. Attachment of the eggs (embryos) in the female onto the dorsal structures of the exopodite. Contingent on char.136.
+232. DE18:620. Life cycle with heterogony.
+233. DE18:621. Ephippium. Contingent on char.230.
+234. DE18:624. Six thoracopods in the ground pattern. Contingent on char.136.
+235. DE18:625. Free head as a bivalved shell; the carapace only encloses the trunk. Contingent on char.222.
+236. DE18:626. Opening of the female genital pore in the brood chamber. Contingent on char.230.
+237. DE18:627. Compound eye with a pore to the exterior. Contingent on char.153.
+238. GO09:188. Fleshy labrum. Contingent on char.144.
+239. GO09:189. Sclerotized sternum formed by antennal to maxillulary sternites. Contingent on char.146.
+240. GO09:190. Biramous limbs. Contingent on char.136.
+241. DE18:759. Trachaea with spiracles. Trachaea evolved independently in the different terrestrialisation events. This character refers to the insect kind. Contingent on char.146.
+242. DE18:760. Spiracles in every segment. Contingent on char.241.
+243. DE18:761. Spermatophores. This character refers to the independent acquisition of the character in insects. Contingent on char.20.
+244. DE18:762. Temporal organ with fine pores in cuticle. Contingent on char.146.
+245. DE18:763. Malpighian tubules from a pair of outgrowths of the proctodaeum at the midgut-hindgut boundary. Contingent on char.56.
+246. DE18:822. Labium from fused second maxillae, medially with glossae and paraglossae, laterally with multiarticulate labial palps. Contingent on char.206.
+247. DE18:823. Abdominal segment ten without appendages. Contingent on char.146.
+248. DE18:825. Abdomen. Contingent on char.146.
+249. DE18:826. Thorax of three segments. Contingent on char.146.
+250. DE18:827. 11 abdominal segments plus telson. Contingent on char.146.
+251. DE18:829. Spiracles on segments 1-8, two pairs on the meso- and metathorax. Contingent on char.146.
+252. DE18:830. Axoneme of the sperm with "9+9+2" pattern. Contingent on char.20.
+253. DE18:831. Differentiation of the ovary into a germarium and a vitellarium. Contingent on char.44.
+254. DE18:832. Ommatidia of the compound eyes with two primary pigment cells. Contingent on char.153.
+255. DE18:851. Antennae have a scapus with musculature, pedicellus and anellus. Contingent on char.138.
+256. DE18:852. Johnstons organ on the pedicellus. Contingent on char.255.
+257. DE18:853. Subdivided tarsus. Contingent on char.136.
+258. DE18:854. Terminal filament. Contingent on char.250.
+259. DE18:855. Formation of an amniotic cavity in embryogenesis. Specific to insects, unrelated to vertebrates. Contingent on char.19.
+260. DE18:857. Three median ocelli. Contingent on char.153.
+261. DE18:861. Mandibles with two condyles. Contingent on char.203.
+262. DE18:862. Tarsus probably of five articles. Contingent on char.136.
+263. DE18:863. Pore of the amniotic cavity at least partly closed. Contingent on char.259.
+264. DE18:864. Abdominal tracheae with longitudinal and transverse connections. Contingent on char.241.
+265. DE18:868. Forewings. Contingent on char.146.
+266. DE18:869. Hindwings. Contingent on char.146.
+267. DE18:870. Pleura of the wing-bearing segment elevated and strongly sclerotized. Contingent on char.265.
+268. DE18:871. In the wing-bearing segments there is a thoracic endoskeleton for strengthening purposes and muscle attachment. Contingent on char.265.
+269. DE18:898. Division of the free wing surface into the fields remigium, vannus and neala by two flexile folds- jugal and anal folds. Contingent on char.265.
+270. DE18:899. Roof-like arrangement of the folded wings over the abdomen through a pleural muscle inserted on the third pterale (axillare) of the wing joint. Contingent on char.265.
+271. DE18:904. Lateral wall of the prothorax is a uniform plate. Contingent on char.146.
+272. DE18:905. One male genital pore. Contingent on char.44.
+273. DE18:906. Uniform testes. Contingent on char.44.
+274. DE18:950. Sclerotized clasp on the jugal field of the hindwing. Contingent on char.266.
+275. DE18:951. Morphogenesis of the male genitalia from the ventral side of the tenth abdominal segment. Contingent on char.146.
+276. DE18:952. In the ovarioles a nutritive cord is formed from the cytoskeleton of the anterior oocytes. Contingent on char.44.
+277. DE18:1017. Endopterygote development. Contingent on char.19.
+278. DE18:1019. Degeneration of the larval stemmata and new formation of the imaginal compound eyes. Contingent on char.277.
+279. DE18:1059. Appendages of the larvae with an unpaired pretarsal claw. Contingent on char.277.
+280. DE18:1060. Formation of the pupal cocoon from silk secreted by labial glands. Contingent on char.277.
+281. DE18:1071. Labial palps of the larvae without muscles. Contingent on char.277.
+282. DE18:1072. Stipes of the larval maxillae transversly divided into basistipes and dististipes. Contingent on char.277.
+283. DE18:1073. Ovipositor is vestigial. Contingent on char.146.
+284. DE18:1114. Piercing and sucking proboscis. Contingent on char.206.
+285. DE18:1115. Thoracic legs are absent in the larval stages. Contingent on char.277.
+286. DE18:1116. Hindwings become halteres. Contingent on char.266.
+287. DE18:1117. Larvae with a prognathous head. Contingent on char.277.
+288. DE18:1118. Esophagus with a long ventral diverticulum. Contingent on char.56.
+289. DE18:1119. Closing apparatus are absent on the spiracles of larvae. Contingent on char.277.
+290. GO09:180. Whole-limb feeding structures. Contingent on char.136.
+291. GO09:218. Maxillary plate. Contingent on char.206.
+292. GO09:219. Maxillae divided into cardo, stipes, lacinia, and galea. Contingent on char.206.
+293. GO09:225. Tentorial posterior apodemes. Contingent on char.206.
+294. GO09:266. Labial palpi forming labellum. Contingent on char.206.
+295. GO09:269. Antennae with arista. Contingent on char.138.
+296. GO09:303. Separate epandrium and hypandrium in males. Contingent on char.146.
+297. GO09:304. Larval maxilla reduced to an elongate membraneous lobe. Contingent on char.277.
+298. GO09:306. Larva with cephalopharyngeal skeleton. Contingent on char.277.
+299. GO09:307. Hypogynium circumverted 360°. Contingent on char.146.
+300. GO09:308. Adults emerge from puparium by inflation of ptilinum. Contingent on char.277.
+301. GO09:309. First abdominal segment with an adventitious "dipteran" suture. Contingent on char.146.
+302. DE18:188. Multiciliated ectodermal cells. Contingent on char.23.
+303. DE18:205. Trochophore larvae with prototroch. Absent in Schistosoma mansoni and Helobdella robusta. Contingent on char.57.
+304. DE18:206. Apical organ. Absent in Schistosoma mansoni and Helobdella robusta. Contingent on char.57.
+305. PE01:38. 4d endomesoderm. Present in Lophotrochozoa. Contingent on char.19.
+306. PE01:37. Ectomesenchyme. Present in Lophotrochozoa, unknown for Nemertodermatida. Contingent on char.19.
+307. PE01:29. Spiral cleavage. Contingent on char.19.
+308. DE18:115. Thread-like sperm. Contingent on char.20.
+309. DE18:132. Frontal glandular complex. Contingent on char.23.
+310. DE18:140. Pharynx simplex coronatus. Contingent on char.56.
+311. DE18:141. Duo-gland adhesive organ. Contingent on char.23.
+312. DE18:142. Lamellate rhabdites. Contingent on char.23.
+313. DE18:144. Pharynx compositus. Contingent on char.56.
+314. DE18:145. Central axial rod in the cilia of the sperm. Contingent on char.20.
+315. DE18:151. Ectolecithal, compound "eggs". Contingent on char.19.
+316. DE18:152. Germovitellarium - heterocellular female gonad. Contingent on char.44.
+317. DE18:157. Inclusion of the two cilia of the sperm in the cytoplasma of the sperm cell. Contingent on char.20.
+318. DE18:158. Aciliated, syncytial neodermis. Contingent on char.23.
+319. DE18:159. Cilia of epidermal cells have a single ciliary rootlet. Contingent on char.23.
+320. DE18:160. Protonephridia with a two-cell weir. Contingent on char.106.
+321. DE18:161. Primary host is a member of the Mollusca.
+322. DE18:162. Neodermis is extended to the larval stage. Contingent on char.321.
+323. DE18:168. Alternation of generations with three generations of different individuals. Contingent on char.321.
+324. DE18:169. Miracidium. Contingent on char.323.
+325. DE18:170. Redia. Contingent on char.323.
+326. DE18:171. Cercaria. Contingent on char.323.
+327. DE18:172. Two-host cycle with a mollusc as the intermediate host and a vertebrate as the definitive host. Contingent on char.321.
+328. DE18:173. Asexual reproduction. This character refers to the alternation of generations with asexual reproduction during the life cycle of the parasite.  Contingent on char.323.
+329. DE18:174. Ectodermal cells of the miracidium arranged in transverse rows. Contingent on char.324.
+330. PE01:84. Setae. Present in Mollusca and Annelida. Contingent on char.23.
+331. PE01:39. Mesodermal germ bands derived from 4d. Present in Annelida and Mollusca, unknown for Nemertodermatida. Contingent on char.87.
+332. PE01:49. Metatroch. Present in Annelida and Mollusca. Contingent on char.57.
+333. PE01:40. Lateral coelom derived from mesodermal bands. Present in Annelida and Mollusca. Contingent on char.87.
+334. PE01:48. Prototroch. Present in Annelida and Mollusca. Contingent on char.57.
+335. PE01:50. Adoral ciliary band. Present in Annelida and Mollusca, unknown for Ambulacraria absent for the rest. Contingent on char.57.
+336. PE01:43. Somatoblast. Present in Annelida and Mollusca. Contingent on char.23.
+337. PE01:23. Gonads present with gametes passing through coelom and metanephridium. Present in Annelida and Mollusca. Contingent on char.106.
+338. GO09:155. Gliointestitial system. Contingent on char.23.
+339. DE18:219. Ventral differentiation into head and foot. Contingent on char.91.
+340. DE18:220. Heart and gonopericardial system. Contingent on char.23.
+341. DE18:223. Mantle with mantle groove. Contingent on char.55.
+342. DE18:224. Jaw and radula apparatus. Contingent on char.56.
+343. DE18:226. Tetraneural nervous system. Contingent on char.47.
+344. DE18:228. Bipectinate gills. Contingent on char.23.
+345. DE18:229. Osphradia. Contingent on char.47.
+346. DE18:241. Calcareous shell. Contingent on char.23.
+347. DE18:242. Dorsoventral muscle bundles used as foot retractors. Simplified to absense/presence since Lottia gigantea is the only mollusc in the sample. Contingent on char.55.
+348. DE18:243. Metanephridia from pericardioducts. Contingent on char.106.
+349. DE18:247. Single dorsal shell. Contingent on char.346.
+350. DE18:248. Hypostracum developed to a nacreaous layer. Contingent on char.346.
+351. DE18:249. Anterior jaw in the oral cavity. Contingent on char.56.
+352. DE18:250. Crystalline style, storage organ for enzymes in the midgut. Contingent on char.56.
+353. DE18:251. Subrectal commissure between the lateral cords of the nervous system. Contingent on char.47.
+354. DE18:258. Ganglioneural nervous system. Contingent on char.47.
+355. DE18:259. Restriction of the mantle groove at the posterior and concomitant development of a cavity. Contingent on char.341.
+356. DE18:260. Development of a free extrusible head through limitation of the mantle, with the shell on the covering of the visceral mass. Contingent on char.341.
+357. DE18:261. Evolution of a special muscle system for the rapid extension of foot and tentacles. Contingent on char.55.
+358. DE18:262. Operculum. Contingent on char.346.
+359. DE18:263. Torsion of the visceral mass and shell above the foot with a twisting of the pleurovisceral nerves. Contingent on char.346.
+360. DE18:264. Mantle groove displaced to the anterior. Contingent on char.341.
+361. DE18:265. Reduction of the right gonad. Contingent on char.44.
+362. GO09:355. Cerebral (pretrochal) eyes. Contingent on char.47.
+363. GO09:366. Position of anus near mouth opening at ventral side. Contingent on char.107.
+364. GO09:369. Hydrostatic muscular system. Contingent on char.55.
+365. GO09:370. Cephalic tentacles. Contingent on char.339.
+366. GO09:372. Tubular protoconch. Contingent on char.346.
+367. DE18:339. Capillary chaetae with beta-chitin. Present in Capitella teleta. Contingent on char.330.
+368. DE18:340. Ciliated folds in foregut. Contingent on char.56.
+369. DE18:341. Parapodia. Present in Capitella teleta. Contingent on char.55.
+370. DE18:342. Chaetae in rows. Present in Capitella teleta. Contingent on char.367.
+371. DE18:343. A pair of pygidial cirri. Present in Capitella teleta. Contingent on char.369.
+372. DE18:344. Paired nuchal organ. Contingent on char.47.
+373. PE01:114. Closed circulatory system with dorsal and ventral blood vessels. Present in Annelida. Contingent on char.23.
+374. PE01:52. Neurotroch. Present in Annelida. Contingent on char.57.
+375. PE01:85. Protrusible and retractible setae. Present in Capitella teleta. Contingent on char.367.
+376. PE01:54. Nonmuscular peritoneal cells in lateral regions of coelom. Present in Annelida. Contingent on char.23.
+377. PE01:47. Pretrochal anlagen. Present in Annelida. Contingent on char.57.
+378. GO09:157. Body with successively added segments developed from a teloblastic growth zone. Contingent on char.23.
+379. GO09:158. Distinct prostomium. Contingent on char.378.
+380. DE18:345. 2+ pairs of pygidial cirri. Contingent on char.371.
+381. DE18:356. Clitellum. Contingent on char.378.
+382. DE18:357. Relocation of the brain to the trunk. Contingent on char.47.
+383. DE18:358. Acrosome tube. Contingent on char.20.
+384. DE18:359. Male before female gonads on successive segments. Contingent on char.378.
+385. DE18:360. Existence of a posterior sucker. Contingent on char.23.
+386. DE18:361. Secondary annulation of the segments. Contingent on char.378.
+387. DE18:362. Epizoa on fresh-water animals. Contingent on char.23.
+388. DE18:363. Tubular muscle cells. Contingent on char.55.
+389. DE18:364. Ganglia with neuron packets. Contingent on char.47.
+390. DE18:365. Acrosome is corkscrew-like. Contingent on char.20.
+391. DE18:366. Male genital pores are fused. Contingent on char.44.
+392. DE18:367. Displacement of the anus to the anterior, dorsally before the sucker. Contingent on char.107.
+393. DE18:374. Posterior sucker with at least four segments. Contingent on char.378.
+394. DE18:375. Stronger annulation. Contingent on char.378.
+395. DE18:376. Strongly developed parenchymatous connective tissue. Contingent on char.23.
+396. DE18:377. Constriction of the connective tissue. Contingent on char.395.
+397. DE18:378. Double-layer of oblique muscles. Contingent on char.55.
+398. DE18:379. Further two neuron packets. Contingent on char.47.
+399. DE18:380. Nervous system with at least 31 pairs of ganglia. Contingent on char.47.
+400. DE18:381. Spermatophores. Contingent on char.20.
+401. DE18:382. Unpaired female genital openings. Contingent on char.44.
+402. DE18:385. Posterior sucker with further three segments. Contingent on char.378.
+403. DE18:386. Anterior sucker. Contingent on char.23.
+404. DE18:387. Prostomium plus segments 1-33. Contingent on char.378.
+405. DE18:388. Coelom as a canal system. Contingent on char.23.
+406. DE18:389. Nervous system with a further three pairs of ganglia. Contingent on char.47.
+407. DE18:390. Serial testes follicles. Contingent on char.44.
+408. DE18:391. Proboscis. Contingent on char.56.
+409. DE18:1402. Gill slits. Absent in Echinodermata. Contingent on char.56.
+410. DE18:1329. Blastopore turns into anus. Contingent on char.107.
+411. GO09:378. Enterocoely. Contingent on char.19.
+412. GO09:391. Epithelia binding iodine and secreting iodothyrosine. Absent in Echinodermata. Contingent on char.23.
+413. GO09:394. Dorsal nerve concentration/brain behind apical organ/apical pole. Contingent on char.47.
+414. DE18:1405. Mucociliary mechanism for feeding. Contingent on char.56.
+415. DE18:1330. Dipleurula. Contingent on char.57.
+416. PE01:70. Hydropore. Present in Ambulacraria, unknown for Chordata. Contingent on char.106.
+417. DE18:1328. Axial complex in protosome with heart, pericardium and glomerulus with podocytes. Contingent on char.106.
+418. PE01:55. Trimery. Present in Ambulacraria. Contingent on char.23.
+419. PE01:53. Neotroch. Present in Ambulacraria, absent in Saccoglossus kowalevskii. Contingent on char.57.
+420. DE18:1392. Head. Contingent on char.91.
+421. DE18:1393. Collar. Contingent on char.91.
+422. DE18:1394. Shield-shaped expansion on ventral side of head. Contingent on char.420.
+423. DE18:1395. Stomochord. Contingent on char.56.
+424. DE18:1406. Supporting skeleton for the stomochord. Contingent on char.423.
+425. DE18:1407. Tornaria with telotroch. Contingent on char.57.
+426. DE18:1408. Subepidermal dorsal nerve cord. Contingent on char.47.
+427. PE01:56. Mesocoelomic ducts and pores. Contingent on char.416.
+428. GO09:392. Preoral gut diverticulum. Contingent on char.56.
+429. GO09:393. Glomerulus as unique excretory structure. Contingent on char.106.
+430. PE01:71. Paired hydropores. Present in Saccoglossus kowalevskii. Contingent on char.416.
+431. PE01:66. Posterior stalk that develops as a ventral outgrowth. Present in Saccoglossus kowalevskii. Contingent on char.91.
+432. DE18:1331. Pentamery with five radii and five interradii. Contingent on char.23.
+433. DE18:1332. Water-vascular system. Contingent on char.416.
+434. DE18:1333. Calcite-secreting stereoblasts. Contingent on char.23.
+435. DE18:1334. Stereom from calcitic sclerites. Contingent on char.434.
+436. DE18:1335. Mutable collagenous tissue. Contingent on char.23.
+437. DE18:1349. Conically running ambulacral tube foot. Contingent on char.433.
+438. DE18:1350. Oral side oriented to the ground. Contingent on char.56.
+439. DE18:1351. Motile spines. Contingent on char.434.
+440. DE18:1352. Madreporic plate (aboral). Contingent on char.433.
+441. DE18:1353. Polian vesicles. Contingent on char.433.
+442. DE18:1354. Supply of the ambulacral tube feet by lateral branches of radial canals. Contingent on char.437.
+443. DE18:1355. Bipinnaria larva with separated preoral ciliary band. Contingent on char.57.
+444. DE18:1356. Paired intestinal diverticula in the arms. Contingent on char.432.
+445. DE18:1357. Gonads extend into the arms. Contingent on char.432.
+446. DE18:1358. Light-sensory organ at the tips of the arms. Contingent on char.432.
+447. GO09:389. Odontophore. Contingent on char.434.
+448. DE18:1360. Habitus: five thin arms separate from a round central disc. Contingent on char.432.
+449. DE18:1361. Vertebrae or vertebral ossicles in the arms. Contingent on char.434.
+450. DE18:1362. Calcareous plates in the periphery of the arms. Contingent on char.434.
+451. DE18:1363. Aboral-oral transfer of the madreporic plate. Contingent on char.440.
+452. DE18:1364. Ophiopluteus. Contingent on char.57.
+453. DE18:1365. Muscles to link vertebral ossicles. Contingent on char.448.
+454. DE18:1366. Ambulacral tube feet with an adhesive disk. Contingent on char.437.
+455. DE18:1367. Habitus: the oral side is extended, with ambulacra under the aboral bulging and the aboral surface is reduced. Contingent on char.432.
+456. DE18:1368. Well-developed haemal system with rete mirabile. Contingent on char.51.
+457. DE18:1369. Internal skeletal system about the oesophagus. Contingent on char.434.
+458. DE18:1370. Sclerites on the ambulacral tube foot. Contingent on char.437.
+459. DE18:1371. Perianal coelom. Contingent on char.107.
+460. DE18:1386. Tentacles formed from ambulacral feet. Contingent on char.437.
+461. DE18:1387. Peripheral microsclerites. Contingent on char.434.
+462. DE18:1388. Calcareous ring around the pharynx. Contingent on char.434.
+463. DE18:1389. Auricularia larvae. Contingent on char.57.
+464. DE18:1390. Peripheral circular and longitudinal musculature. Contingent on char.55.
+465. DE18:1391. Respiratory trees. Contingent on char.23.
+466. DE18:1372. Apical system of ten calcareous plates. Contingent on char.434.
+467. DE18:1373. Aristotle's lantern of 40 calcareous elements. Contingent on char.434.
+468. DE18:1374. Perignathic girdle. Contingent on char.434.
+469. DE18:1375. Corona. Contingent on char.432.
+470. DE18:1376. Peristome. Contingent on char.469.
+471. DE18:1377. Two pores per ambulacral tube foot in the ambulacral plates which connect to internal ampulla by two canals. Contingent on char.437.
+472. DE18:1378. Periproct - membrane around the anus. Contingent on char.107.
+473. DE18:1379. Echinopluteus with eight arms. Contingent on char.57.
+474. DE18:1380. Lantern muscular system of 60 elements. Contingent on char.467.
+475. DE18:1383. Interambulacral auricle. Contingent on char.468.
+476. DE18:1384. Gills. Contingent on char.457.
+477. DE18:1385. Sphaeridia. Contingent on char.439.
+478. DE18:1409. Entodermal chorda dorsalis beneath the neural tube. Contingent on char.51.
+479. DE18:1410. Freely moving larva with undulating tail. Present in Chordata except Amniota. Contingent on char.55.
+480. DE18:1412. Branchial gut as feeding apparatus for taking up particulate food from free water in the adult. Present in Branchiostoma floridae and Ciona intestinalis. Contingent on char.409.
+481. DE18:1413. Ectodermal neural tube in its entire length under the dorsal side. Contingent on char.91.
+482. DE18:1414. Neural tube differentiated into brain anteriorly. Contingent on char.481.
+483. GO09:396. Endostyle or thymus. Contingent on char.23.
+484. GO09:397. Postanal tail. Absent in Homo sapiens. Contingent on char.107.
+485. GO09:402. Body with segmented longitudinal musculature developed from rows of mesodermal pockets from archenteron. Absent in Urochordata. Contingent on char.87.
+486. DE18:1438. Endopsammic lifestyle. Contingent on char.23.
+487. DE18:1440. Oral cirri. Contingent on char.56.
+488. DE18:1441. Subdivision of the splanchnocoel in the region of the branchial gut. Contingent on char.409.
+489. DE18:1442. Chorda dorsalis with muscle plates. Contingent on char.478.
+490. DE18:1443. Rostral expansion of the chorda dorsalis. Contingent on char.489.
+491. DE18:1444. Large number of gonads - sac-like, paired and in rows. Contingent on char.44.
+492. DE18:1445. Pigment cup ocelli with pigment cell and photosensory cell. Contingent on char.47.
+493. DE18:1446. Combination of a protonephridial solenocyte and metanephridial podocyte. Contingent on char.106.
+494. DE18:1415. Periodic reversal of heart beat - heart formed from infolding of the wall of the pericardium. Contingent on char.55.
+495. DE18:1416. Tunica (mantle) with tunicin fibers and free cells. Contingent on char.23.
+496. Sessile filter-feeding habitus with an inhalant and an exhalant siphon. Contingent on char.23.
+497. DE18:1431. Extensive circulatory system with veins and arteries. Contingent on char.87.
+498. DE18:1434. Extension of the chorda dorsalis from the tail of the larva to the back of the entire body. Contingent on char.478.
+499. DE18:1435. Polymery under incorporation of the chorda dorsalis in a metameric musculature. Contingent on char.478.
+500. DE18:1436. Formation of dorsal spinal nerves per segment. Contingent on char.481.
+501. DE18:1447. Trunk. Contingent on char.91.
+502. DE18:1448. Head with brain and sensory organs. Contingent on char.482.
+503. DE18:1450. Endothelium. Contingent on char.87.
+504. DE18:1451. Central muscular heart. Contingent on char.497.
+505. DE18:1452. Erythrocytes with haemoglobin. Contingent on char.23.
+506. DE18:1453. Bone (calcified connective tissue). Contingent on char.23.
+507. DE18:1454. Bony dermal skeleton. Contingent on char.506.
+508. DE18:1455. Cartilaginous endoskeleton. Contingent on char.23.
+509. DE18:1456. Neural crest. Unknown for Ciona intestinalis since the presence of neural crest cells is controversial. Contingent on char.481.
+510. DE18:1457. Pancreas. Contingent on char.56.
+511. DE18:1458. Spiral valve of the intestine. Contingent on char.56.
+512. DE18:1459. Thyroid. Contingent on char.56.
+513. DE18:1460. Brain of five sections. Contingent on char.502.
+514. DE18:1461. Dorsal spinal ganglia and ventral spinal nerves. Contingent on char.481.
+515. DE18:1462. Hypophysis with adenohypophysis and neurohypophysis in diencephalon. Contingent on char.502.
+516. DE18:1465. Paired lateral eyes from diencephalon, with optic nerve and retina. Contingent on char.502.
+517. DE18:1467. Lateralis system and labyrinth. Contingent on char.502.
+518. DE18:1468. Nasal organ. Contingent on char.502.
+519. DE18:1469. Skin with multilayered epidermis. Contingent on char.23.
+520. DE18:1470. Opisthonephros from nephrons with malphigian corpuscules. Contingent on char.106.
+521. DE18:1483. Paired pectoral fins. Contingent on char.91.
+522. DE18:1484. Paired pelvic fins. Contingent on char.91.
+523. DE18:1488. Splanchnocranium. Contingent on char.508.
+524. DE18:1489. Endoskeleton with central cartilage and perichondral bone. Contingent on char.508.
+525. DE18:1490. Neurocranium. Contingent on char.502.
+526. DE18:1491. Ventral arcualia in the axial skeleton. Contingent on char.499.
+527. DE18:1492. Pelvic girdle. Contingent on char.521.
+528. DE18:1493. Shoulder girdle. Contingent on char.522.
+529. DE18:1494. Horizontal septum in muscle segments. Contingent on char.499.
+530. DE18:1495. Axons of the nerve cells are surrounded by myelin sheath. Contingent on char.47.
+531. DE18:1496. The dorsal and ventral roots of the spinal nerves join to form uniform nerve cords. Contingent on char.500.
+532. DE18:1500. Labyrinth with horizontal semicircular canal. Contingent on char.517.
+533. DE18:1501. Nasal organ with paired lateral sacs with a separate nasal opening. Contingent on char.518.
+534. DE18:1502. Testes and kidneys are linked. Contingent on char.106.
+535. DE18:1521. Exoskeleton of dermal bones. Contingent on char.507.
+536. DE18:1525. Ossified endoskeleton. Contingent on char.506.
+537. DE18:1526. Pharynx with air-filled diverticula. Contingent on char.56.
+538. DE18:1527. Nasal opening with paired openings. Contingent on char.533.
+539. DE18:1528. Labyrinth with otoliths. Modified to reflect the presence of otoliths in general. Contingent on char.517.
+540. GO09:407. Optic tectum. Contingent on char.502.
+541. GO09:410. Mauthner fibres in central nervous system. Contingent on char.481.
+542. GO09:412. Segmented adenohypophysis. Contingent on char.502.
+543. GO09:413. Vertebrae. Contingent on char.502.
+544. GO09:415. Close atrium and ventricle of heart. Contingent on char.497.
+545. GO09:416. Closed pericardium. Contingent on char.497.
+546. GO09:417. True lymphocytes. Contingent on char.23.
+547. GO09:418. Nervous regulation of heart. Contingent on char.497.
+548. GO09:419. Spleen. Contingent on char.56.
+549. GO09:420. Collecting kidney tubules. Contingent on char.520.
+550. GO09:421. Typhlosole. Contingent on char.56.
+551. GO09:422. Two or three semicircular canals. Contingent on char.532.
+552. GO09:423. True neuromasts. Contingent on char.517.
+553. GO09:427. Cerebellum. Contingent on char.502.
+554. GO09:428. Jaws and teeth. Contingent on char.523.
+555. GO09:430. Three semicircular canals. Contingent on char.551.
+556. GO09:434. Superior oblique muscle of eye attached anteriorly to eyeball. Contingent on char.502.
+557. GO09:436. Jaw muscle external to mandibular arch. Contingent on char.554.
+558. DE18:1522. Lepidotrichia. Absent in Tetrapoda. Contingent on char.507.
+559. DE18:1485. Ventral anal fin. Absent in Tetrapoda. Contingent on char.23.
+560. DE18:1486. Dorsal fin. Absent in Tetrapoda. Contingent on char.91.
+561. DE18:1487. Tail fin. Absent in Amniota absent=0, present=1, only in larvae=2. Contingent on char.91. The larvae of frogs have a tail fin, but adults do not. Modified to reflect the state in Xenopus tropicalis. 
+562. DE18:1463. Gill apparatus as a "pure" respiratory organ: absent=0, present=1, only in larvae=2. Absent in Amniota. Contingent on char.476.
+563. DE18:1524. Operculum: absent=0, present=1, present during development=2. Absent in Amniota. Contingent on char.523. A fully formed operculum is only present in non-tetrapods. Amphibians have a small operculum during the larval stage that gets incorporated into the ear. Amniotes have an operculum fold during early embryonic development. Modified to reflect the state in Xenopus tropicalis and the relict presence of the future in amniotes.
+564. DE18:1530. Acrodine tooth cap. Contingent on char.504.
+565. DE18:1534. Fulcra formed from pairing of rhomboid scales. Contingent on char.535.
+566. DE18:1535. Unpaired lung/air bladder organ dorsal of the intestine with mainly hydrostatic function. Contingent on char.537.
+567. DE18:1536. Paired fins with muscular basal section covered with scales. Contingent on char.521.
+568. DE18:1543. Homoceral tail fin. Contingent on char.561.
+569. DE18:1544. Clavicle. Contingent on char.528.
+570. DE18:1545. Indentical numbers of radii and lepidotrichia in the dorsal fin and tail fin. Contingent on char.558.
+571. DE18:1550. Roof tiling-like coverage of the scales with overlap of the posterior edges - ganoid scales modified. Contingent on char.535.
+572. DE18:1551. Vertebrae with median neural spines. Contingent on char.543.
+573. DE18:1552. Freely motile maxilla and an interopercular bone. Contingent on char.523.
+574. DE18:1553. Quadratojugal reduced or fused with the quadratum. Contingent on char.507.
+575. DE18:1558. Diural caudal skeleton - fused. Contingent on char.524.
+576. DE18:1559. Hypuralia with seven or less bone pieces. Contingent on char.575.
+577. DE18:1560. Hypuralia are divided into two groups. Contingent on char.575.
+578. DE18:1561. Hypuralia one and two are carried by one vertebra. Contingent on char.575.
+579. DE18:1562. Hypuralia are enlarged to broad bone plates. Contingent on char.575.
+580. DE18:1563. Uroneuralia. Contingent on char.543.
+581. DE18:1564. Movable premaxilla. Contingent on char.523.
+582. DE18:1565. Unpaired basibranchial tooth plate. Contingent on char.554.
+583. DE18:1566. Concentrically ringed cyloid scales without ganoine. Contingent on char.571.
+584. GO09:443. Laterosensory canal in dentary. Contingent on char.517.
+585. GO09:444. Two series of pelvic radials. Contingent on char.522.
+586. GO09:447. Premaxilla with internal process lining the anterior part of nasal pit. Contingent on char.523.
+587. GO09:452. Urohyal formed by a medial tendon bone. Contingent on char.523.
+588. GO09:453. Foramen between hypohyals for passage of hyoidean artery. Contingent on char.523.
+589. GO09:454. Ossified basihyal. Contingent on char.523.
+590. GO09:455. Posterior myodome extending into basioccipital. Contingent on char.525.
+591. GO09:465. Pleurostyle. Contingent on char.561.
+592. GO09:466. Fusion of hypural two and ural centrum one. Contingent on char.561.
+593. GO09:467. Fusion of extrascapular and parietal. Contingent on char.525.
+594. GO09:468. Silvery peritoneum over gas bladder. Contingent on char.566.
+595. GO09:471. Gasbladder with anterior and posterior chambers. Contingent on char.566.
+596. GO09:472. Peritoneal tunic of anterior chamber of gasbladder attached to anterior two pleural ribs. Contingent on char.595.
+597. GO09:473. Kinethmoid. Contingent on char.523.
+598. GO09:474. Dorsomedial process of palatine contacting mesethmoid. Contingent on char.523.
+599. GO09:475. Teeth on fifth ceratobranchial ankylosed to bone. Contingent on char.554.
+600. GO09:476. Scaphium on Weberian apparatus. Contingent on char.566.
+601. GO09:477. Tripus on Weberian apparatus. Contingent on char.566.
+602. GO09:478. Os suspensorium in Weberian apparatus. Contingent on char.566.
+603. DE18:1567. Monobasally paired fins. Contingent on char.522.
+604. DE18:1568. Vena cava is to the posterior. Contingent on char.497.
+605. DE18:1569. Sclerotic rings of more than five bone plates around the eyes. Contingent on char.506.
+606. DE18:1570. Intercranial joint. Contingent on char.525.
+607. DE18:1571. Genuine enamel covers the entire tooth. Contingent on char.554.
+608. DE18:1581. Lymphatic system. Contingent on char.497.
+609. DE18:1582. Agreements in the circulatory system - lungs, arteries and veins, with an S-shaped conus arteriosus. Contingent on char.497.
+610. DE18:1583. Folded teeth with plicidentine. Contingent on char.554.
+611. DE18:1589. Quadrupedy - the first mesomer becomes the humerus and posteriorly the femur, first radial and second mesomer become the radius and ulna/tibia and fibula. Contingent on char.603.
+612. DE18:1590. Pentadactyly. This character reflects the definition of the tetrapod hand. The finger formula is differentiated in Xenopus tropicalis and Gallus gallus. Contingent on char.603.
+613. DE18:1591. Phalanges from distal radialia of the fins. Contingent on char.611.
+614. DE18:1592. Heart with interauricular septum. Contingent on char.497.
+615. DE18:1593. Dorsal extension of the pelvic girdle and connection with the vertebral column - the pelvis consists of the ilium, ischium and pubis. Contingent on char.527.
+616. DE18:1594. Autostylic skull - the neurocranium is linked with the palatoquadrate. Contingent on char.525.
+617. DE18:1595. Skull with an unpaired condyle. Contingent on char.525.
+618. DE18:1596. Uniform vertebrae. Contingent on char.543.
+619. DE18:1597. Ribs with two connections to the vertebral column. Contingent on char.618.
+620. DE18:1598. Eye glands. Contingent on char.516.
+621. DE18:1599. Lungs as the sole respiratory organ in the adult. Contingent on char.537.
+622. DE18:1600. Trachea and larynx with tracheal closure apparatus. Contingent on char.523.
+623. DE18:1601. Nose with choana. Contingent on char.538.
+624. DE18:1602. Middle ear with stapes. Contingent on char.523.
+625. DE18:1603. Ear with tympanum and auditory canal. Contingent on char.523.
+626. DE18:1604. Eyelids. Contingent on char.516.
+627. DE18:1605. Stratum corneum with keratin. Contingent on char.519.
+628. GO09:512. Cranium free from pectoral girdle. Contingent on char.528.
+629. GO09:516. Parathyroid gland. Contingent on char.512.
+630. DE18:1606. Anterior limbs with four fingers. Contingent on char.612.
+631. DE18:1607. Operculum as an additional middle ear bone. Contingent on char.563.
+632. DE18:1608. Divided teeth with sharp points- bicuspidate. Contingent on char.554.
+633. DE18:1609. Large interpterygoidal window in the palate. Contingent on char.523.
+634. DE18:1610. Skull with two condyles. Contingent on char.525.
+635. DE18:1611. Papilla amphibiorum. Contingent on char.625.
+636. DE18:1612. Modification of the pronephros for the transport of sperm. Contingent on char.534.
+637. DE18:1613. Macula neglecta in the ear labyrinth. Contingent on char.625.
+638. DE18:1614. Auditory system for low frequencies. Contingent on char.631.
+639. DE18:1617. Larvae with horny jaw and horn teeth. Contingent on char.479.
+640. DE18:1618. Shortening of the vertebral column. Contingent on char.543.
+641. DE18:1619. Urostyle. Contingent on char.618.
+642. DE18:1620. Rod-like extended ilium of the pelvic girdle. Contingent on char.527.
+643. DE18:1621. Hind limbs are longer than forelimbs. Contingent on char.611.
+644. DE18:1622. Os cruris from the fusion of the tibia and fibula. Contingent on char.611.
+645. DE18:1623. Lengthening of the proximal tarsalia. Contingent on char.611.
+646. DE18:1624. Radius and ulna are fused to form a uniform bone rod. Contingent on char.611.
+647. GO09:519. Green rods in the eye. Contingent on char.502.
+648. GO09:520. Fat bodies associated with gonads. Contingent on char.44.
+649. GO09:521. Two types of skin gland (mucous & granular). Contingent on char.519.
+650. GO09:525. Papilla neglecta. Contingent on char.625.
+651. GO09:526. Carotid labyrinth. Contingent on char.497.
+652. GO09:527. Choanal tube opening into archenteron during development. Contingent on char.623.
+653. GO09:531. Atlas with a single centrum. Contingent on char.543.
+654. GO09:532. First spinal nerve exits from spinal nerve canal via intervertebral foramen. Contingent on char.543.
+655. GO09:535. Fusion of hyobranchial elements into a hyoid plate. Contingent on char.523.
+656. DE18:1631. Convex, semicircular occipital condyle. Contingent on char.525.
+657. DE18:1632. Large exoccipitalia join over the basioccipital and under the occipital hole of the skull. Contingent on char.525.
+658. DE18:1633. Eggs laid on land. Absent in Homo sapiens. Contingent on char.19.
+659. DE18:1634. Meroblastic cleavage of yolk-rich eggs. Contingent on char.19.
+660. DE18:1635. Amnion and serosa. Contingent on char.19.
+661. DE18:1636. Allantois. Contingent on char.497.
+662. DE18:1637. Yolk sac. Contingent on char.19.
+663. DE18:1638. Copulatory organ. Contingent on char.44.
+664. DE18:1639. Multilayered stratum corneum. Contingent on char.627.
+665. GO09:536. Two pairs of sacral vertebrae. Contingent on char.527.
+666. GO09:538. Astragalus bone. Contingent on char.611.
+667. GO09:539. Paired spinal accessory (11th) and hypoglossal (12th) cranial nerves incorporated into skull. Contingent on char.525.
+668. GO09:556. Four-chambered heart. Contingent on char.497.
+669. DE18:1640. Tabular is small or absent. Contingent on char.507.
+670. DE18:1641. Supratemporal is small or absent. Contingent on char.507.
+671. DE18:1642. Supraoccipital has an anterior crest. Contingent on char.507.
+672. DE18:1643. Suborbital window in the palatine. Contingent on char.506.
+673. DE18:1644. A single coronoid in the lower jaw. Contingent on char.523.
+674. DE18:1645. Fusion of the first two neck vertebrae, the atlas and axis. Contingent on char.543.
+675. DE18:1646. Eye muscles: the iris and ciliary muscles have cross-striated musculature. Contingent on char.516.
+676. DE18:1647. Nasal glands lie outside nasal capsule. Contingent on char.518.
+677. DE18:1654. Two temporal fenestrae. Contingent on char.507.
+678. DE18:1655. Suborbital window. Contingent on char.507.
+679. DE18:1656. The neck vertebrae are longer than the vertebrae in the middle of the back. Contingent on char.543.
+680. DE18:1670. Four toes in hindlimbs. Contingent on char.611.
+681. DE18:1671. Ventricles of the heart are completely separated. Contingent on char.504.
+682. DE18:1672. Pulmonary diaphragm. Contingent on char.621.
+683. DE18:1675. Preorbital window. Contingent on char.507.
+684. DE18:1676. Mandibular window. Contingent on char.523.
+685. DE18:1677. Fourth trochanter. Contingent on char.611.
+686. DE18:1678. Pubis and ischium are rod-like lengthened structures. Contingent on char.527.
+687. DE18:1679. Transparent nictitating membrane in the eye. Contingent on char.516.
+688. DE18:1680. Eustachian tubes are fused medially. Contingent on char.625.
+689. DE18:1688. Regression of the left efferent aortic arch. Contingent on char.504.
+690. DE18:1689. Horny sheaths. Contingent on char.627.
+691. DE18:1690. Bill forms as the premaxilla is elongated. Contingent on char.627.
+692. DE18:1691. Fusion of temporal windows with each other and with the orbit. Contingent on char.677.
+693. DE18:1692. Neognathy: pterygoid is in two articulated sections. Contingent on char.506.
+694. DE18:1693. Quadratum is loosely joined with the neurocranium. Contingent on char.525.
+695. DE18:1694. Prokinetic skull. Contingent on char.525.
+696. DE18:1695. Saddle joint on the neck vertebrae. Contingent on char.543.
+697. DE18:1696. Free thoracic vertebrae. Contingent on char.543.
+698. DE18:1697. Synsacrum. Contingent on char.543.
+699. DE18:1698. Pygostyle. Contingent on char.543.
+700. DE18:1699. Long, thin scapula. Contingent on char.528.
+701. DE18:1700. Clavicles combined to form the furcula. Contingent on char.528.
+702. DE18:1701. Os innominatum. Contingent on char.686.
+703. DE18:1702. Thoracic vertebrae are flattened and linked to the sternum. Contingent on char.543.
+704. DE18:1703. Fusion and transformation of carpalia. Contingent on char.611.
+705. DE18:1704. Forelimbs as carriers of remiges. Contingent on char.611.
+706. DE18:1705. Ulna is more developed than radius. Contingent on char.611.
+707. DE18:1706. Fusion of metacarpals one, two and three. Contingent on char.611.
+708. DE18:1707. Three fingers on the forelimbs. Contingent on char.612.
+709. DE18:1708. Maximum of 2-3-1 pattern on the phalanges. Contingent on char.613.
+710. DE18:1709. Tibia and fibula fuse. Contingent on char.611.
+711. DE18:1711. Tibiotarsus. Contingent on char.611.
+712. DE18:1710. Intertarsal joint. Contingent on char.711.
+713. DE18:1712. Tarsometatarsus. Contingent on char.611.
+714. DE18:1713. Opposable thumbs. Contingent on char.611.
+715. DE18:1714. Feathers - down and contour. Contingent on char.627.
+716. DE18:1715. Flying ability. Contingent on char.715.
+717. DE18:1716. Homoiothermy. Present in Amniota. Contingent on char.497.
+718. DE18:1717. Gizzard. Contingent on char.56.
+719. DE18:1718. Oil glands in a paired arrangement above the last tail vertebrae. Contingent on char.543.
+720. DE18:1719. Brain with an enlargement of the integration sites, tectum opticum, cerebellum and corpus striatum in the telencephalon. Contingent on char.513.
+721. DE18:1720. Air sacs in the body for respiration, which reach into the cavities of the bones. Contingent on char.621.
+722. DE18:1721. Syrinx as unique, sound-producing organ. Contingent on char.523.
+723. DE18:1722. Large eyes as central organs in the orientation system. Contingent on char.516.
+724. DE18:1725. Quadratum with double condyles. Contingent on char.694.
+725. GO09:544. Low concentration of urea in blood plasma. Contingent on char.497.
+726. GO09:546. Huxley's foramen in extracolumella. Contingent on char.625.
+727. GO09:564. Pterygoid and palatines not fused. Contingent on char.523.
+728. GO09:565. Tubae auditivae paired and close to/adjacent on cranial midline or single anterior opening. Contingent on char.625.
+729. GO09:566. Foramen ilioischiadicum cadually closed. Contingent on char.527.
+730. GO09:568. Ostia canalis carotici et ophtalmici externi situated in a well marked depression. Contingent on char.525.
+731. GO09:569. Double, and open, incisurae laterales on the sternum. Contingent on char.703.
+732. GO09:570. Incisura capitis of proximal humerus enclosed from crus dorsale fossa by a distinct ridge. Contingent on char.611.
+733. GO09:571. Trochlea metatarsalia III of tarsometatarsus distinctly asymmetric. Contingent on char.611.
+734. DE18:1726. Rotation of the limbs under the body. Contingent on char.611.
+735. DE18:1727. Anuclear erythrocytes. Contingent on char.505.
+736. DE18:1728. Heterodonty. Contingent on char.554.
+737. DE18:1729. Diphyodonty. Contingent on char.554.
+738. DE18:1730. Synapsid skull. Lower temporal fenestra only. Contingent on char.507.
+739. DE18:1731. Secondary jaw joint. Contingent on char.554.
+740. DE18:1732. Secondary palate. Contingent on char.506.
+741. DE18:1733. Dicondylic skull. Contingent on char.525.
+742. DE18:1734. Number of phalanges 23333. Contingent on char.613.
+743. DE18:1735. Obturator foramen in the pubic bone. Contingent on char.615.
+744. DE18:1737. Hair. Contingent on char.627.
+745. DE18:1739. Dermal glands - sebaceous, mammary and sweat glands. Contingent on char.23.
+746. DE18:1740. Two further ear ossicles and tympanicum. Contingent on char.625.
+747. DE18:1751. Coracoid process as the only remnant of the coracoids, with the loss of a connection between the sternum and scapula. Contingent on char.528.
+748. DE18:1753. Scapula with fossa supraspinata. Contingent on char.528.
+749. GO09:586. Prolonged intrauterine gestation. Contingent on char.23.
+750. DE18:1755. Mammary papilla. Contingent on char.745.
+751. DE18:1756. Hindgut and urogenital openings are separate. Contingent on char.44.
+752. DE18:1757. Spirally twisted cochlea in inner ear. Contingent on char.625.
+753. DE18:1764. Extra premolar in upper and lower jaw. Contingent on char.736.
+754. DE18:1765. Corpus callosum. Contingent on char.513.
+755. DE18:1766. Trophoblast and chorioallantoic placenta. Contingent on char.19.
+756. DE18:1767. Monodelphy - vagina is unpaired and the oviducts open into the uterus. Contingent on char.751.
+757. GO09:576. Postparietals fused. Contingent on char.525.
+758. GO09:578. Differentiation of cheek teeth in premolars and molars. Contingent on char.554.
+759. GO09:579. Anterior lamina fused to the ventral ramus of alisphenoid, and cranial process of squamosal expanded. Contingent on char.525.
+760. GO09:581. Vertical tympanic membrane. Contingent on char.625.
+761. GO09:582. Tribosphenic molar teeth. Contingent on char.736.
+762. GO09:585. Seminal vesicle. Contingent on char.44.
+763. GO09:594. Prehensile hands. Contingent on char.611.
+764. PE01:19. Spermatozoa without accessory centriole. Unknown for Placozoa, present in Nematoida, Schistosoma mansoni and Acoela. Contingent on char.20.
+765. PE01:44. Neoblasts. Present in Acoelomorpha and Schistosoma mansoni. Contingent on char.23.
+766. DE18:328. Segmentation (metamerism). Present in Annelida and Arthropoda. Contingent on char.91.
+767. PE01:51. Telotroch. Present in Capitella teleta, Lottia gigantea and Ptychodera flava. Contingent on char.57.
+768. Osculum.  Contingent on char.23.
+769. Cells are highly mobile and can transdifferentiate in the adult. Contingent on char.23.
+770. DE18:29. Pinacocytes in the form of flat cells lining the body surface. Contingent on char.23.
