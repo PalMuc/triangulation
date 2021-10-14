@@ -169,7 +169,7 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
 
 (In folder Tables)
 
-[Table S1](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%201%20-%20Species%20data.csv): Information about all the data of species used in this research. 
+[Table S1](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%201%20Species%20summary.xlsx): Information about all the data of species used in this research. 
 
 [Table S2](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%202%20-%20Run%201%20-%20Convergence%20statistics%20-%20Convergence%20statistics.csv): The summary of all datasets settings and results for run 1.
 
