@@ -185,8 +185,17 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
 
 ## General workflow for morphology analysis: ##
 
-**Luis to fill in**
+1. Select morphological datasets based on number of characters and taxon coverage of the 47 species of the genome gene content set.
 
+2. Combine the character lists of the selected sets. Remove redundant and irrelevant characters.
+ 
+3. Code two master matrices. One using Non-additive coding and another one using Reductive coding.
+ 
+4. Produce another eight downsampled matrices for taxa exclusion experiments.
+ 
+5. Analyze the ten matrices on Mr.Bayes v3.2 using the Mkv model (setting included in the matrices).
+ 
+6. Statistical investigation (BF).
 
 
 ## Glossary in this study: ##
