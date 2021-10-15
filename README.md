@@ -136,7 +136,7 @@ Repeat the steps of Orthogroups and Homogroups with the new taxa combination pro
 
 **Long-Branch Attraction (LBA)**
 
-We tested the effect of reducing specific taxa in two possible methods: first analyzing the data after reducing the taxa from start to end and second by reducing the data from an already pre-analyzed matrix. The last can significantly reduce the complexity of the analyzes. 
+We tested the effect of reducing specific taxa in two possible methods: first analyzing the data after reducing the taxa from start to end and second by reducing the data from an already pre-analyzed matrix. The last can significantly reduce the complexity of the analyses. 
 
 This part of the study was performed using the default parameters of all tools.
 
