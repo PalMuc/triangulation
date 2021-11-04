@@ -181,7 +181,7 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
 
 [Table S4](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%204%20-%20Supp.%20Table%204.pdf): Naming convention description for the long branch attraction tests for ingroups and outgroup-reduced datasets for long branches. 
 
-[Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20-%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
+[Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
 
 ## General workflow for morphology analysis: ##
 
