@@ -46,7 +46,7 @@ All the steps are listed and described below, for an overview see Figure 1.
 4. Extract ortho- and homogroups.
 5. Convert into matrices of absence and presence.
 6. Generate phylogeny.
-7. Statistical investigation
+7. Statistical investigation.
 
 ### Programs used: ###
 
@@ -103,7 +103,7 @@ After generating the orthogroups file (Orthogroups.tsv, from OrthoFinder output)
 
 Optional - 7. Extract convergence statistics for the phylogenies.
 
-Optional - 8. Calculate Bayes factor from MCMC samples, using the codes ([Morphology](https://github.com/PalMuc/triangulation/blob/main/Code/metazoan_hypothesis_test_Luis.Rev), [Genome gene content](https://github.com/PalMuc/triangulation/blob/main/Code/metazoan_hypothesis_test.Rev)), plot with [R script](https://github.com/PalMuc/triangulation/blob/main/Code/plot_BF_2.R).  
+Optional - 8. Statistical investigation from MCMC samples, using the codes ([Morphology](https://github.com/PalMuc/triangulation/blob/main/Code/metazoan_hypothesis_test_Luis.Rev), [Genome gene content](https://github.com/PalMuc/triangulation/blob/main/Code/metazoan_hypothesis_test.Rev)), plot with [R script](https://github.com/PalMuc/triangulation/blob/main/Code/plot_BF_2.R).  
 
 Optionally: To convert short format names of Species to full scientific names use [Names_convert.sh](https://github.com/PalMuc/triangulation/blob/main/Code/Names_convert.sh).
 
