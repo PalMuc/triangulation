@@ -46,7 +46,7 @@ All the steps are listed and described below, for an overview see Figure 1.
 4. Extract ortho- and homogroups.
 5. Convert into matrices of absence and presence.
 6. Generate phylogeny.
-7. (Statistical investigation)
+7. Statistical investigation
 
 ### Programs used: ###
 
@@ -181,7 +181,7 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
 
 [Table S4](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%204%20-%20Supp.%20Table%204.pdf): Naming convention description for the long branch attraction tests for ingroups and outgroup-reduced datasets for long branches. 
 
-[Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20BF%20Results%20-%20Results.csv): The Bayes factor (BF) calculation results.
+[Table S5](https://github.com/PalMuc/triangulation/blob/main/Tables/Supplementary%20Table%205%20Statistical%20hypothesis%20testing%20calculation%20results%20-%20Results.csv): Statistical hypothesis testing calculation results.
 
 ## General workflow for morphology analysis: ##
 
@@ -195,7 +195,7 @@ All NEXUS files are in [Morphology_NEXUS.zip](https://github.com/PalMuc/triangul
  
 5. Analyze the ten matrices on Mr.Bayes v3.2 using the Mkv model (setting included in the matrices).
  
-6. Statistical investigation (BF).
+6. Statistical investigation (Statistical hypothesis testing calculation).
 
 
 ## Glossary in this study: ##
@@ -217,5 +217,5 @@ _Naming convention in this work_ - The initial dataset was Opisthokonta (Opi) an
 
 ## Who do I talk to if I have questions or problems? ##
 
-* for technical questions about genome gene content analyses or BF: Ksenia Juravel (k.juravel@palmuc.org)
+* for technical questions about genome gene content analyses or the statistical hypothesis testing: Ksenia Juravel (k.juravel@palmuc.org)
 * for technical questions about morphology analyses: Luis Porras (l.porras@palmuc.org)
