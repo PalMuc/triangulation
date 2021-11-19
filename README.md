@@ -219,3 +219,4 @@ _Naming convention in this work_ - The initial dataset was Opisthokonta (Opi) an
 
 * for technical questions about genome gene content analyses or the statistical hypothesis testing: Ksenia Juravel (k.juravel@palmuc.org)
 * for technical questions about morphology analyses: Luis Porras (l.porras@palmuc.org)
+* for all other questions the corresponding author: Gert Wörheide (g.woerheide@palmuc.org)
