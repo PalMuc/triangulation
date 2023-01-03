@@ -1,7 +1,7 @@
 ***This is a data repository of the working paper 
-[published on bioRxiv on 20 November 2021](https://t.co/d84HTd8Qhn?amp=1):***
+[first published on bioRxiv on 20 November 2021](https://t.co/d84HTd8Qhn?amp=1):***
 
-# Improved resolution of recalcitrant nodes in the animal phylogeny through the analysis of genome gene content and morphology #
+# Exploring genome gene content and morphological analysis to test recalcitrant nodes in the animal phylogeny #
 
 Juravel, Ksenia 1; Porras, Luis 1; Höhna, Sebastian 1,2; Pisani, Davide 3; Wörheide, Gert 1,2,4, §
 
@@ -16,7 +16,7 @@ Juravel, Ksenia 1; Porras, Luis 1; Höhna, Sebastian 1,2; Pisani, Davide 3; Wör
 § corresponding author email: woerheide@lmu.de
 
 ## Abstract ##
-An accurate phylogeny of animals is needed to clarify their evolution, ecology, and impact on shaping the biosphere. Despite several hundred thousand amino acid datasets nowadays routinely used to test hypotheses of animal relationships, two nodes in particular remain unresolved: the root of the animal tree and the root of the bilaterian lineage. To assess patterns of congruence with established amino-acid derived phylogenetic hypotheses for these problematic nodes, we independently analysed novel genome gene content and morphological datasets. Both our datasets very strongly support sponges as the sister group of all the other animals, the worm-like bilaterian lineage Xenacoelomorpha as the sister group of the other Bilateria, and largely support monophyletic Deuterostomia. We conclude that the last common animal ancestor may have been a simple, microphagous organism without a nervous system and muscles, while the last common ancestor of Bilateria might have been a small, acoelomate-like worm without a through gut.
+An accurate phylogeny of animals is needed to clarify their evolution, ecology, and impact on shaping the biosphere. Although datasets of several hundred thousand amino acids are nowadays routinely used to test phylogenetic hypotheses, key deep nodes in the metazoan tree remain unresolved: the root of animals, the root of Bilateria, and the monophyly of Deuterostomia. Instead of using the standard approach of amino acid datasets, we performed analyses of newly assembled genome gene content and morphological datasets to investigate these recalcitrant nodes in the phylogeny of animals. We explored extensively the choices for assembling the genome gene content dataset and model choices of morphological analyses. Our results are robust to these choices and provide additional insights into the early evolution of animals, they are consistent with sponges as the sister group of all the other animals, the worm-like bilaterian lineage Xenacoelomorpha as the sister group of the other Bilateria, and tentatively support monophyletic Deuterostomia. 
 
 ## Description ##
 This repository includes all the codes used to analyze the data for the various phylogenies.
