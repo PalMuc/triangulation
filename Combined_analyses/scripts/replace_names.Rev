@@ -1,0 +1,51 @@
+###########################################################################
+#
+# RevBayes Script: Genome Gene Content Based Phylogenies
+#
+#
+# author: Sebastian Hoehna
+#
+###########################################################################
+
+N_REPS = 4
+
+DATASET = args[1]
+
+four_letter_code = ["HERO", "CATE", "IXSC", "DAPU", "DRME", "SACE", "SCPO", "MAOR", "CRNE", "ALMA", "MOBR", "SARO", "DARE", "XETR", "CIIN", "GAGA", "BRFL", "HOSA", "SPPU", "ACDI", "NEVE", "HYMA", "MNLE", "PLBA", "ACPL", "STPU", "AUMO", "OPFA", "PTFL", "SAKO", "CAOW", "SPAR", "LOGI", "CAEL", "PRPA", "HOHO", "TRAD", "SCMA", "SYCI", "AMQU", "TEWI", "OSCA", "MEST", "NEWE", "PSVA", "SYRO", "XEBO"]
+full_names = ["Helobdella robusta", "Capitella teleta", "Ixodes scapularis", "Daphnia pulex", "Drosophila melanogaster", "Saccharomyces cerevisiae", "Schizosaccharomyces pombe", "Magnaporthe oryzae", "Cryptococcus neoformans", "Allomyces macrogynus ", "Monosiga brevicollis", "Salpingoeca rosseta", "Danio rerio", "Xenopus tropicalis", "Ciona intestinalis", "Gallus gallus", "Branchiostoma floridae", "Homo sapiens", "Spizellomyces punctatus", "Acropora digitifera", "Nematostella vectensis", "Hydra magnipapillata", "Mnemiopsis leidyi", "Pleurobrachia bachei", "Acanthaster planci", "Strongylocentrotus purpuratus", "Australostichopus mollis", "Ophionereis fasciata", "Ptychodera flava", "Saccoglossus kowalevskii", "Capsaspora owczarzaki", "Sphaeroforma arctica", "Lottia gigantea", "Caenorhabditis elegans", "Pristionchus pacificus", "Hoilungia hongkongensis", "Trichoplax adhaerens", "Schistosoma mansoni", "Sycon ciliatum", "Amphimedon queenslandica", "Tethya wilhelma", "Oscarella carmela", "Meara stichopi", "Nemertoderma westbladi", "Pseudaphanostoma variabilis", "Symsagittifera roscoffensis", "Xenoturbella bocki"]
+
+full_names = ["Helobdella_robusta", "Capitella_teleta", "Ixodes_scapularis", "Daphnia_pulex", "Drosophila_melanogaster", "Saccharomyces_cerevisiae", "Schizosaccharomyces_pombe", "Magnaporthe_oryzae", "Cryptococcus_neoformans", "Allomyces_macrogynus_", "Monosiga_brevicollis", "Salpingoeca_rosseta", "Danio_rerio", "Xenopus_tropicalis", "Ciona_intestinalis", "Gallus_gallus", "Branchiostoma_floridae", "Homo_sapiens", "Spizellomyces_punctatus", "Acropora_digitifera", "Nematostella_vectensis", "Hydra_magnipapillata", "Mnemiopsis_leidyi", "Pleurobrachia_bachei", "Acanthaster_planci", "Strongylocentrotus_purpuratus", "Australostichopus_mollis", "Ophionereis_fasciata", "Ptychodera_flava", "Saccoglossus_kowalevskii", "Capsaspora_owczarzaki", "Sphaeroforma_arctica", "Lottia_gigantea", "Caenorhabditis_elegans", "Pristionchus_pacificus", "Hoilungia_hongkongensis", "Trichoplax_adhaerens", "Schistosoma_mansoni", "Sycon_ciliatum", "Amphimedon_queenslandica", "Tethya_wilhelma", "Oscarella_carmela", "Meara_stichopi", "Nemertoderma_westbladi", "Pseudaphanostoma_variabilis", "Symsagittifera_roscoffensis", "Xenoturbella_bocki"]
+
+for (rep in 1:N_REPS) {
+  trace = readTreeTrace("output/"+DATASET+"_run_"+rep+".trees", treetype="non-clock")
+  trace.setBurnin(0.25)
+
+  # Summarize tree trace and the consensus tree to file
+  map_tree = mapTree(trace, file="output/"+DATASET+"_run_"+rep+".map.tre")
+  con_tree = consensusTree(trace, file="output/"+DATASET+"_run_"+rep+".majrule.tre")
+
+  for ( i in 1:four_letter_code.size() ) {
+    map_tree.setTaxonName(current=four_letter_code[i],new=full_names[i])
+    con_tree.setTaxonName(current=four_letter_code[i],new=full_names[i])
+  }
+  writeNexus(map_tree, file="output/"+DATASET+"_full_names_run_"+rep+".map.tre")
+  writeNexus(con_tree, file="output/"+DATASET+"_full_names_run_"+rep+".majrule.tre")
+}
+
+# Read in the tree trace and construct the consensus tree tree #
+trace = readTreeTrace("output/"+DATASET+".trees", treetype="non-clock")
+trace.setBurnin(0.25)
+
+# Summarize tree trace and the consensus tree to file
+map_tree = mapTree(trace, file="output/"+DATASET+".map.tre")
+con_tree = consensusTree(trace, file="output/"+DATASET+".majrule.tre")
+
+for ( i in 1:four_letter_code.size() ) {
+  map_tree.setTaxonName(current=four_letter_code[i],new=full_names[i])
+  con_tree.setTaxonName(current=four_letter_code[i],new=full_names[i])
+}
+writeNexus(map_tree, file="output/"+DATASET+"_full_names.map.tre")
+writeNexus(con_tree, file="output/"+DATASET+"_full_names.majrule.tre")
+
+
+q()

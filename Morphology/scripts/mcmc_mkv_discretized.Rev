@@ -1,0 +1,249 @@
+################################################################################
+#
+# RevBayes Example: Inferring a Phylogeny ofusing the Mk Model
+#                   with a discretized Beta distribution for the stationary frequencies.
+#
+# This file: Runs the full MCMC analysis
+#
+# authors: Sebastian Höhna
+#
+################################################################################
+
+
+############
+# Settings #
+############
+
+#TAXON_SET = "Aco-44taxa"
+#CODING    = "Non-additive"
+
+#BRANCH_LENGTH_HYPERPRIOR = FALSE
+#SPLIT_BY_STATES          = TRUE
+#NUM_PROFILE_MIXTURES     = 5
+#NUM_ASRV_CATS_BINARY     = 4
+#NUM_ASRV_CATS_TRINARY    = 4
+#BINARY_CODING            = "variable"     # either of all | variable | informative
+#TRINARY_CODING           = "variable"     # either of all | variable
+#
+#N_REPS      = 2
+#MCMC_ITER   = 1E5
+
+
+
+DATA_FILENAME = "data_matrices/" + TAXON_SET + "-MorphoTree." + CODING + ".nex"
+
+
+OUTPUT_FILENAME = "output/" + TAXON_SET + "-" + CODING +
+                  "_ASVR_bin_" + NUM_ASRV_CATS_BINARY +
+                  "_ASVR_tri_" + NUM_ASRV_CATS_TRINARY +
+                  "_mix_" + NUM_PROFILE_MIXTURES +
+                  "_CODE_bin_" + BINARY_CODING +
+                  "_CODE_tri_" + TRINARY_CODING +
+                  ifelse( BRANCH_LENGTH_HYPERPRIOR, "_hyperprior", "_prior" ) +
+                  ifelse( SPLIT_BY_STATES, "_partitioned", "_combined" )
+
+
+#######################
+# Reading in the Data #
+#######################
+
+# Import the morphological character matrix #
+# this file contains only the taxa for which morphological characters are available #
+morpho = readDiscreteCharacterData( DATA_FILENAME )
+morpho_binary  = morpho
+morpho_trinary = morpho
+if ( SPLIT_BY_STATES ) {
+    morpho_binary.setNumStatesPartition(2)
+    morpho_trinary.setNumStatesPartition(3)
+}
+
+## helpers
+taxa <- morpho.names()
+num_taxa <- taxa.size()
+num_branches <- 2 * num_taxa - 2
+
+
+# Create some vector for the moves and monitors of this analysis
+moves    = VectorMoves()
+monitors = VectorMonitors()
+
+##############
+# Tree model #
+##############
+
+# Set up branch length hyperprior
+if ( BRANCH_LENGTH_HYPERPRIOR ) {
+    br_len_lambda ~ dnExp(0.2)
+    moves.append( mvScale(br_len_lambda, weight=2) )
+} else {
+    br_len_lambda <- 10.0
+}
+
+# Define the tree parameter.
+# First, we generate the topology.
+# We assume a uniform prior on topology.
+phylogeny ~ dnUniformTopologyBranchLength(taxa, branchLengthDistribution=dnExponential(br_len_lambda))
+
+# compute the tree length from the phylogeny
+tree_length := phylogeny.treeLength()
+
+moves.append( mvNNI(phylogeny, weight=num_branches/2.0) )
+moves.append( mvSPR(phylogeny, weight=num_branches/10.0) )
+moves.append( mvBranchLengthScale(phylogeny, weight=num_branches) )
+
+
+
+if ( SPLIT_BY_STATES ) {
+
+    ###############
+    # Binary ASVR #
+    ###############
+
+    if ( NUM_ASRV_CATS_BINARY > 1 ) {
+
+        # Set up Gamma-distributed rate variation.
+        alpha_morpho_binary ~ dnUniform( 0.0, 1E8 )
+        alpha_morpho_binary.setValue( 1.0 )
+        rates_morpho_binary := fnDiscretizeGamma( alpha_morpho_binary, alpha_morpho_binary, 4 )
+
+        # Moves on the parameters to the Gamma distribution.
+        moves.append( mvScale(alpha_morpho_binary, lambda=1, weight=2.0) )
+    } else {
+
+        rates_morpho_binary <- [1.0]
+
+    }
+
+
+    ###########################################
+    # Binary morphological substitution model #
+    ###########################################
+
+    if ( NUM_PROFILE_MIXTURES > 1 ) {
+
+        # Specify the two parameters to the Beta distribution, and the moves on these parameters.
+        beta_scale ~ dnLognormal( 0.0, sd=2*0.587405 )
+        moves.append( mvScale(beta_scale, lambda=1, weight=5.0 ) )
+
+        # Create the Beta distribution, according to the two parameters and the number of categories.
+        cats := fnDiscretizeBeta(beta_scale, beta_scale, NUM_PROFILE_MIXTURES)
+
+        # Create the Q matrices. These data are binary, so we initialize the Jukes-Cantor matrix with
+        # two states. The matrix is initialized from the median values of out four quantiles from
+        # the Beta.
+
+        for (i in 1:cats.size()) {
+            Q_binary[i] := fnF81(simplex(abs(1-cats[i]), cats[i]))
+        }
+
+        # Tell the model what the probability of a character going into any particular category.
+        # This prior says that a character is equally likely to be put into any category.
+        matrix_probs <- simplex( rep(1,NUM_PROFILE_MIXTURES) )
+
+
+        ###############
+        # Binary CTMC #
+        ###############
+
+        # Combine all of our elements into a CTMC. Because we have not observed any invariant sites,
+        # we specify the coding is 'variable'. Note that we are now feeding the site matrices to the CTMC.
+
+        phyMorphoBinary ~ dnPhyloCTMC(tree=phylogeny, siteRates=rates_morpho_binary, Q=Q_binary[1], type="Standard", coding=BINARY_CODING)
+        phyMorphoBinary ~ dnPhyloCTMC(tree=phylogeny, siteRates=rates_morpho_binary, Q=Q_binary, type="Standard", coding=BINARY_CODING, siteMatrices=matrix_probs)
+        phyMorphoBinary.clamp(morpho_binary)
+
+    } else {
+
+        Q_binary <- fnJC(2)
+
+
+        ###############
+        # Binary CTMC #
+        ###############
+
+        # Combine all of our elements into a CTMC. Because we have not observed any invariant sites,
+        # we specify the coding is 'variable'. Note that we are now feeding the site matrices to the CTMC.
+
+        phyMorphoBinary ~ dnPhyloCTMC(tree=phylogeny, siteRates=rates_morpho_binary, Q=Q_binary, type="Standard", coding=BINARY_CODING)
+        phyMorphoBinary.clamp(morpho_binary)
+
+    }
+
+
+}
+
+
+###########################################
+# Trinary morphological substitution model #
+###########################################
+
+Q_trinary <- fnJC(3)
+
+
+################
+# Trinary ASVR #
+################
+
+if ( NUM_ASRV_CATS_TRINARY > 1 ) {
+
+    # Set up Gamma-distributed rate variation.
+    alpha_morpho_trinary ~ dnUniform( 0.0, 1E8 )
+    alpha_morpho_trinary.setValue( 1.0 )
+    rates_morpho_trinary := fnDiscretizeGamma( alpha_morpho_trinary, alpha_morpho_trinary, 4 )
+
+    # Moves on the parameters to the Gamma distribution.
+    moves.append( mvScale(alpha_morpho_trinary, lambda=1, weight=2.0) )
+
+} else {
+
+    rates_morpho_trinary <- [1.0]
+
+}
+
+
+###############
+# Trinary CTMC #
+###############
+
+# Combine all of our elements into a CTMC. Because we have not observed any invariant sites,
+# we specify the coding is 'variable'. Note that we are now feeding the site matrices to the CTMC.
+
+phyMorphoTrinary ~ dnPhyloCTMC(tree=phylogeny, siteRates=rates_morpho_trinary, Q=Q_trinary, type="Standard", coding=TRINARY_CODING)
+phyMorphoTrinary.clamp(morpho_trinary)
+
+
+
+########
+# MCMC #
+########
+
+# initialize the model object #
+mymodel = model(phylogeny)
+# Create a vector of monitors #
+# 1. for the full model #
+monitors.append( mnModel(filename=OUTPUT_FILENAME+".log", printgen=10) )
+# 2. the tree #
+monitors.append( mnFile(filename=OUTPUT_FILENAME+".trees", printgen=10, phylogeny) )
+# 3. and a few select parameters to be printed to the screen #
+monitors.append( mnScreen(printgen=100) )
+
+# Initialize the MCMC object #
+mymcmc = mcmc(mymodel, monitors, moves, nruns=N_REPS, combine="mixed")
+
+# Run the MCMC #
+mymcmc.burnin(generations=MCMC_ITER/10.0, tuningInterval=200)
+mymcmc.run(generations=MCMC_ITER, tuningInterval=200)
+
+# check the performance of the MCMC/moves
+mymcmc.operatorSummary()
+
+# Read in the tree trace and construct the consensus tree tree #
+trace = readTreeTrace(OUTPUT_FILENAME+".trees", treetype="non-clock")
+trace.setBurnin(0.25)
+
+# Summarize tree trace and the consensus tree to file
+map_tree = mapTree(trace, file=OUTPUT_FILENAME+".map.tre")
+con_tree = consensusTree(trace, file=OUTPUT_FILENAME+".majrule.tre")
+
+# Quit RevBayes #
+q()

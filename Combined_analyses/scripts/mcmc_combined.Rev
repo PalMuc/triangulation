@@ -1,0 +1,218 @@
+###########################################################################
+#
+# RevBayes Script: Combined analysis of gene content and morphology
+#
+#
+# author: Sebastian Hoehna
+#
+###########################################################################
+
+N_REPS = 4
+NUM_MCMC_ITERATIONS = 2E5
+
+setOption("useScaling","TRUE")
+setOption("printNodeIndex","FALSE")
+
+DATASET = args[1]
+
+### Read in gene content data
+data_gene_content <- readDiscreteCharacterData( "data/" + DATASET + ".nexus" )
+morpho = readDiscreteCharacterData( "data/morph.nexus" )
+
+morpho_binary  = morpho
+morpho_trinary = morpho
+
+# split by states
+morpho_binary.setNumStatesPartition(2)
+morpho_trinary.setNumStatesPartition(3)
+
+# Get some useful variables from the data. We need these later on.
+n_species <- data_gene_content.ntaxa()
+n_branches <- 2*n_species - 3
+taxa <- data_gene_content.taxa()
+
+moves = VectorMoves()
+monitors = VectorMonitors()
+
+
+####################################
+# Hierarchical branch length prior
+####################################
+
+# Prior mean branch length mu is Exp(10)
+mu ~ dnExponential(10)
+mu.setValue( 0.1 )
+moves.append( mvScale(mu, weight=1.0, lambda=0.3) )
+
+# branch lengths are iid Exp(1/mu)
+rec_mu := 1/mu
+
+psi ~ dnUniformTopologyBranchLength( dnExp(rec_mu), taxa )
+
+moves.append( mvSPR(psi, weight=n_branches/2.0) )
+moves.append( mvNNI(psi, weight=n_branches) )
+moves.append( mvBranchLengthScale(psi, weight=n_branches) )
+
+
+#############################################
+# Across sites rate variation (gene content)
+#############################################
+
+# Prior for shape parameter is Uniform(0,1E8)
+alpha ~ dnUniform(0,1E8)
+alpha.setValue(1.0)
+
+moves.append( mvScale(alpha, weight=2.0, lambda=0.2) )
+
+# Create a discretized Gamma(alpha,alpha) distribution with 4 rate categories
+gamma_rates := fnDiscretizeGamma( alpha, alpha, 4, true )
+
+
+####################################
+# Gene Content Substitution matrix
+####################################
+
+# prior for the stationary frequency is Beta(1,1)
+pi_prior <- v(1,1)
+pi ~ dnDirichlet(pi_prior)
+
+moves.append( mvSimplexElementScale(pi, weight=5, alpha=10) )
+
+# Create a deterministic variable for the rate matrix
+Q := fnFreeBinary(transition_rates=pi,rescaled=true)
+
+
+####################################
+# Gene Content Substitution model
+####################################
+
+# Initialize the substitution model
+seq ~ dnPhyloCTMC(tree=psi, Q=Q, siteRates=gamma_rates, type="Restriction", coding="noabsencesites|nosingletonpresence")
+#seq ~ dnPhyloDolloCTMC(tree=psi, siteRates=gamma_rates, coding="noabsencesites|nosingletonpresence")
+
+# Attach the data
+seq.clamp(data_gene_content)
+
+
+
+
+
+###############
+# Binary ASVR #
+###############
+
+# Set up Gamma-distributed rate variation.
+alpha_morpho_binary ~ dnUniform( 0.0, 1E8 )
+alpha_morpho_binary.setValue( 1.0 )
+rates_morpho_binary := fnDiscretizeGamma( alpha_morpho_binary, alpha_morpho_binary, 4 )
+
+# Moves on the parameters to the Gamma distribution.
+moves.append( mvScale(alpha_morpho_binary, lambda=1, weight=2.0) )
+
+
+###########################################
+# Binary morphological substitution model #
+###########################################
+
+# the number of profile mixtures
+NUM_PROFILE_MIXTURES = 5
+
+# Specify the two parameters to the Beta distribution, and the moves on these parameters.
+beta_scale ~ dnLognormal( 0.0, sd=2*0.587405 )
+moves.append( mvScale(beta_scale, lambda=1, weight=5.0 ) )
+
+# Create the Beta distribution, according to the two parameters and the number of categories.
+cats := fnDiscretizeBeta(beta_scale, beta_scale, NUM_PROFILE_MIXTURES)
+
+# Create the Q matrices. These data are binary, so we initialize the Jukes-Cantor matrix with
+# two states. The matrix is initialized from the median values of out four quantiles from
+# the Beta.
+
+for (i in 1:cats.size()) {
+  Q_binary[i] := fnF81(simplex(abs(1-cats[i]), cats[i]))
+}
+
+# Tell the model what the probability of a character going into any particular category.
+# This prior says that a character is equally likely to be put into any category.
+matrix_probs <- simplex( rep(1,NUM_PROFILE_MIXTURES) )
+
+
+
+###############
+# Binary CTMC #
+###############
+
+# first we need a rate scaler from the number of expected gene gains/losses to morphological substitutions
+morpho_rate_binary ~ dnUniform( 0.0, 1E8 )
+morpho_rate_binary.setValue( 1.0 )
+
+# Moves on the parameters to the Gamma distribution.
+moves.append( mvScale(morpho_rate_binary, lambda=1, weight=2.0) )
+
+# Combine all of our elements into a CTMC. Because we have not observed any invariant sites,
+# we specify the coding is 'variable'. Note that we are now feeding the site matrices to the CTMC.
+
+phyMorphoBinary ~ dnPhyloCTMC(tree=psi, branchRates=morpho_rate_binary, siteRates=rates_morpho_binary, Q=Q_binary, type="Standard", coding="variable", siteMatrices=matrix_probs)
+phyMorphoBinary.clamp(morpho_binary)
+
+
+###########################################
+# Trinary morphological substitution model #
+###########################################
+
+Q_trinary <- fnJC(3)
+
+
+################
+# Trinary ASVR #
+################
+
+
+# Set up Gamma-distributed rate variation.
+alpha_morpho_trinary ~ dnUniform( 0.0, 1E8 )
+alpha_morpho_trinary.setValue( 1.0 )
+rates_morpho_trinary := fnDiscretizeGamma( alpha_morpho_trinary, alpha_morpho_trinary, 4 )
+
+# Moves on the parameters to the Gamma distribution.
+moves.append( mvScale(alpha_morpho_trinary, lambda=1, weight=2.0) )
+
+
+
+################
+# Trinary CTMC #
+################
+
+# first we need a rate scaler from the number of expected gene gains/losses to morphological substitutions
+morpho_rate_trinary ~ dnUniform( 0.0, 1E8 )
+morpho_rate_trinary.setValue( 1.0 )
+
+# Moves on the parameters to the Gamma distribution.
+moves.append( mvScale(morpho_rate_trinary, lambda=1, weight=2.0) )
+
+# Combine all of our elements into a CTMC. Because we have not observed any invariant sites,
+# we specify the coding is 'variable'. Note that we are now feeding the site matrices to the CTMC.
+
+phyMorphoTrinary ~ dnPhyloCTMC(tree=psi, branchRates=morpho_rate_trinary, siteRates=rates_morpho_trinary, Q=Q_trinary, type="Standard", coding="variable")
+phyMorphoTrinary.clamp(morpho_trinary)
+
+
+
+####################################
+# MCMC
+####################################
+
+# Initialize the DAG model
+mymodel = model(Q)
+
+# Initialize the monitors
+monitors.append( mnModel(filename="output/"+DATASET+".log",printgen=10, separator = TAB) )
+monitors.append( mnStochasticVariable(filename="output/"+DATASET+".var",printgen=100, separator = TAB) )
+monitors.append( mnFile(filename="output/"+DATASET+".trees",printgen=10, separator = TAB, posterior=false, likelihood=false, prior=false, psi) )
+monitors.append( mnScreen(printgen=100, alpha, mu, pi) )
+
+# Initialize and run the MCMC
+mymcmc = mcmc(mymodel, monitors, moves, nruns=N_REPS, combine="mixed", moveschedule="random")
+mymcmc.run(generations=NUM_MCMC_ITERATIONS, tuningInterval=200)
+
+
+q()
