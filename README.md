@@ -1,5 +1,6 @@
-***This is a data repository of the Publication
-Juravel, K., Porras, L., Höhna, S., Pisani, D., & Wörheide, G. (2023). Exploring genome gene content and morphological analysis to test recalcitrant nodes in the animal phylogeny. [PloS One, 18(3), e0282444.]( https://doi.org/10.1371/journal.pone.0282444):***
+***This is a data repository for
+
+***Juravel, K., Porras, L., Höhna, S., Pisani, D., & Wörheide, G. (2023). Exploring genome gene content and morphological analysis to test recalcitrant nodes in the animal phylogeny. [PloS One, 18(3), e0282444.]( https://doi.org/10.1371/journal.pone.0282444):
 
 # Exploring genome gene content and morphological analysis to test recalcitrant nodes in the animal phylogeny #
 
